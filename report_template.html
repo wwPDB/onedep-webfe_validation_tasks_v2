@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--#include virtual="/ann_tasks_v2/includes/head_common_bs.html"-->
+  <title>Report %(identifier)s</title>
+</head>
+<body>
+<div id="wrap">
+  <!--#include virtual="/ann_tasks_v2/includes/page_header_minimum_menu_bs.html"-->
+  <div class="container">
+    <div class="page-header">
+      <h3>Data Review Report <small id="subheader" class="pull-right">%(identifier)s </small></h3>
+    </div>
+    <!--  Begin report content -->
+    %(linkMarkup)s
+    %(reportMarkup)s
+    <!--  End report content -->
+  </div> <!-- end container -->
+</div> <!-- end wrap -->
+<!--#include virtual="/ann_tasks_v2/includes/page_footer_bs.html"-->
+<!--#include virtual="/ann_tasks_v2/includes/page_javascript_bs.html"-->
+
+</body>
+</html>
+

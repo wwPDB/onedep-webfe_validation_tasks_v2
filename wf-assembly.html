@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+    <title>Validation Tasks Module</title>
+  </head>
+  
+  <body>
+    <div id="wrap">
+      
+      <!-- Common page navigation -->
+      <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+      
+      
+      <div class="container">        <!-- Begin main page content container -->
+	<div class="page-header"> 
+	  <h3>Validation Tasks  <small>Assembly Options</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+	</div>
+
+	
+	<!--  Assembly section -->
+	<div id="assembly-dialog" title="Assembly View">  </div>
+	
+        <!-- assembly update option button-->
+        <div id="assembly-update-container">
+	  <div>
+	    <span id="assembly-button-label"> </span> &nbsp;&nbsp;  
+	    <button class="btn btn-primary" id="assembly-update-button">Update assemblies</button>
+	    &nbsp;&nbsp;<span id="assembly-update-status" class="op-status"></span> 
+	  </div>	  
+        </div>
+
+        <!-- assembly calculation form -->
+        <form id="assemblyForm" class="form-inline" role="form"> 
+          <fieldset>
+	    <legend>Assembly calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+	    <div class="form-group">	      
+              <label class="control-label" for="assemblyargs">Options:</label>
+              <input class="form-control" type="text" id="assemblyargs" name="assemblyargs"  value="" size="80" placeholder="Command line arguments"/> 
+	    </div>
+	    
+            <input id="assembly-calc-button" class="btn btn-primary"  TYPE="submit" VALUE="Run"/> 
+            <div class="op-status"></div>
+          </fieldset>
+        </form>
+        <br/>
+	<div>
+          <button class="btn btn-primary" id="assembly-input-form-button">Launch/reset assembly input form</button>
+	  <!--
+              <button id="assembly-dep-info-button">View depositor assembly information</button>   
+	      <button id="assembly-dep-info-hide-button">Hide depositor assembly information</button>
+	      -->
+	</div>
+
+
+	<!-- Container for assembly depositor details -->
+	<div id="assembly-dep-info-container"></div>
+	<div id="assembly-dep-info-container-alt"></div>
+	
+	<!-- Container for assembly input form -->
+	<div id="assembly-input-form-container"></div>
+	
+	<!-- Container for alternative assembly result text -->
+	<div id="assembly-container-alt"></div>
+	
+	
+	<div id="assembly-html-container"></div>
+	
+	<!--  JMol section -->
+	<div id="jmol-dialog-assem" title="JMol View"></div>
+	<div id="jsmol-dialog-1" title="JsMol View"></div>
+	
+	
+	<!-- progress spinner -->
+	<div id="loading">
+	  <div id="loadingcontent">
+	    <p id="loadingspinner"> Running calculation ...	</p>
+	  </div>
+	</div>
+	
+      </div> <!-- End main page content container -->
+      
+    </div> <!-- end wrap -->
+    
+    <!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+    <!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+  </body>
+</html>
+
+

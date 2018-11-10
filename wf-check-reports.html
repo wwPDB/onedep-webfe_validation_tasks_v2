@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+  <title>Validation Tasks Module</title>
+
+</head>
+<body>
+<div id="wrap">
+  <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+
+  <div class="container">
+    <div class="page-header"> 
+      <h3>Validation Tasks  <small>Check Reports</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+    </div>
+    
+    
+    <div id="check-report-alt-dialog" class="row"></div>
+    
+    <div id="check-report-dialog" class="row">
+      
+      <form id="check-report-idops-form" method="get" action="/service/validation_tasks_v2/inline_idops"  enctype="application/x-www-form-urlencoded" name="check-report-idops" class="form-inline" role="form" > 
+	<INPUT name="formid" TYPE="hidden" VALUE="check-report-idops"> 
+	
+	<fieldset>
+	  <legend>Check reports<a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+	  
+	  <div class="form-group">
+	    <label for="operation1" class="label-control">Report options </label> 
+	    <select id="operation1" name="operation" class="form-control">
+              <option selected="selected"       value="check-all">All entry checks</option>
+              <option                           value="report">Create entry report</option>
+              <option                        value="checkv5">Entry dictionary check (V5 int)</option>
+	      <option                        value="checkNext">Entry dictionary check (V50 pub)</option>
+              <option                        value="check-format">Entry coordiante format check </option>
+              <option                        value="check-misc">Entry extra/misc checks</option>
+              <option                        value="check-geometry">Entry geometry checks</option>
+              <option                        value="check-special-position">Entry special position check</option>
+              <option                        value="check-sf">Entry structure factor checks</option>
+              <option                        value="cif2pdb">PDB Format File</option>
+	      <!-- 
+		   <option                      value="fetch_entry">Fetch entry file</option>
+              <option                      value="fetch_sf">Fetch structure factor file</option>
+	      -->
+	    </select>
+	  </div>
+	  
+	  <input id="check-report-idops-button" class="btn btn-primary" TYPE="submit" VALUE="Go"> 
+	  <div id="check-report-idops-status" class="op-status"></div>
+	  <div id="check-report-idops-links" class="op-links"></div>
+	</fieldset>
+	<input  name="contentType" TYPE="hidden" VALUE="model"> 
+	<input  name="filesource" TYPE="hidden" VALUE="session"> 
+      </form>
+    </div> <!-- end check report dialog -->
+
+    <!-- progress spinner -->
+    <div id="loading">
+      <div id="loadingcontent">
+        <p id="loadingspinner">
+          Running  ...
+        </p>
+      </div>
+    </div>
+    
+    
+    <div id="check-report-container" class="row">
+      <div id="check-report-idops-report"  class="report-content"></div>
+    </div>
+    
+    
+  </div> <!-- end container -->
+</div> <!-- end wrap -->
+<!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+<!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+
+</body>
+</html>
+

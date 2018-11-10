@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+    <title>Validation Tasks Module</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+      
+      <div class="container">
+	<div class="page-header"> 
+	  <h3>Validation Tasks  <small>Upload Options</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+	</div>
+
+	<div id="upload-dialog" title="Upload options" class="row">
+	  <form id="id-form" method="get" action="/service/validation_tasks_v2/uploadfromid"  name="id-form" class="form-inline"  role="form"> 
+	    <fieldset>
+	      <legend>Data set code options<a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+	      <div class="form-group">
+		<label for="identifier1" class="label-control">Deposition data set ID</label>  
+		<input type="text" name="identifier" id="identifier1" value="" placeholder="D_1000000000" class="form-control">
+	      </div>
+	      <input id="id-form-button" class="btn btn-primary" TYPE="submit" VALUE="Go"> 
+	      <div id="id-form-status" class="op-status"></div>
+	    </fieldset>
+	    <input  name="filesource"    TYPE="hidden" VALUE="wf-archive"> 
+	    <input  name="instance"      TYPE="hidden" VALUE=""> 
+	    <input  name="skipstatus"    TYPE="hidden" VALUE="y">
+	    <input  name="standalonemode"    TYPE="hidden" VALUE="y">
+	  </form>
+	  <br />
+	  <!-- File upload form -->
+	  <form id="upload-model" enctype="multipart/formdata" action="/service/validation_tasks_v2/upload" method="post" class="form-inline" role="form">
+
+	    <fieldset>
+	      <legend>File upload options <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+	      <div class="form-group">
+		<label for="file1" class="label-control">File name</label>  
+		  <input class="form-control" type="file" id="file1" name="file" value="" />
+	      </div>
+
+	      <div class="form-group">	    
+		<label for="operation" class="label-control">File type</label>
+		  <select class="form-control" name="filetype" id="model-filetype">
+		    <option selected="selected" value="model,pdbx,,model,pdbx,0">PDBx/mmCIF Model</option>
+		    <option                     value="model,pdbx,rcsb-mmcif,model,pdbx,0">RCSB/mmCIF Model</option>
+		    <option                     value="model,pdbx,rcsb-cifeps,model,pdbx,0">RCSB/CIFEPS Model</option>
+		    <option                     value="model,pdbx,rcsb-mmcif-strip,pdbx,0">RCSB/mmCIF Model (strip derived categories)</option>
+		    <option                     value="model,pdbx,rcsb-cifeps-strip,pdbx,0">RCSB/CIFEPS Model (strip derived categories)</option>
+		    <option                     value="model,pdbx,rcsb-mmcif-alt,pdbx,0">RCSB/mmCIF Model (alternative)</option>
+		  </select>
+	      </div>
+	      <input class="btn btn-primary" type="submit" value="Go" />
+	      <div id="upload-model-status" class="op-status"></div>
+	    </fieldset>
+	    <input  name="standalone"    TYPE="hidden" VALUE="y">	    
+	    <!-- <input id="formid" name="formid" type="hidden" value="model_file_upload" /> -->
+	  </form>
+
+	  <br />
+
+	  <form id="upload-exp" enctype="multipart/formdata" action="/service/validation_tasks_v2/upload" method="post" class="form-inline">
+	    <fieldset>
+	      <legend>Experimental data file upload options <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label for="exp-file">File name</label>
+		<input class="form-control" type="file" id="exp-file" name="file" value="" />
+	      </div>
+
+	      <div class="form-group">	      
+		<label for="exp-filetype">File type</label>
+		    <select class="form-control" name="filetype" id="exp-filetype">
+		      <option selected="selected" value="structure-factors,pdbx,mmcif-sf,structure-factors,pdbx,0">Reflections PDBx/mmCIF (gzipped)</option>
+		      <option                     value="structure-factors,mtz,mtz2pdbx,structure-factors,pdbx,60">Reflections MTZ (conversion timeout 60s)</option>
+		      <option                     value="structure-factors,mtz,mtz2pdbx,structure-factors,pdbx,300">Reflections MTZ (conversion timeout 300s)</option>
+		      <option                     value="nmr-chemical-shifts,pdbx,pdbx2nmrstar,nmr-chemical-shifts,nmr-star,0">NMR Chemical Shifts (PDBx/mmCIF)</option>
+		      <!-- <option                     value="nmr-chemical-shifts,nmr-star,,nmr-chemical-shifts,pdbx,0">NMR Chemical Shifts (NMRSTAR)</option> -->
+		      <option                     value="em-volume,map,,em-volume,map,0">3DEM Volume (MAP/CCP4/MRC2000)</option>
+		    </select>
+	      </div>
+	      <input class="btn btn-primary" type="submit" value="Go" />
+	      <div id="upload-exp-status" class="op-status"></div>
+	    </fieldset>
+              <!--            <input id="exp-formid" name="formid" type="hidden" value="refln_file_upload" /> -->
+	    <input  name="standalonemode"    TYPE="hidden" VALUE="y">
+	  </form>
+	</div>
+
+
+
+
+
+	<div id="uploadProgress">
+	  <h4>Upload progress:</h4>
+	  <div class="progress">
+	    <div class="bar"></div >
+	    <div class="percent">0%</div>
+	  </div>
+	  <div id="status"></div>
+	</div>
+
+
+    </div><!--  mainContent--> 
+</div> <!-- end wrap -->
+
+<!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+<!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+
+</body>
+</html>

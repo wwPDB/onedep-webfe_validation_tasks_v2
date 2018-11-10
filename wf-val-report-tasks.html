@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+    <title>Validation Tasks Module</title>
+  </head>
+  
+  <body>
+    <div id="wrap">
+      
+      <!-- Common page navigation -->
+      <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+      
+      
+      <div class="container">        <!-- Begin main page content container -->
+	<div class="page-header"> 
+	  <h3>Validation Tasks  <small>Report Options</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+	</div>
+
+
+	<!--  Tasks section -->
+	<div id="task-alt-dialog"></div>
+
+	<div id="task-dialog" title="Task Calculations">
+
+          <!-- Validation report form -->
+          <form id="valreport-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>Validation report <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="valreport-task-form-inp-1">Options:</label>
+		<input id="valreport-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+
+	</div> <!-- end of task dialog -->
+
+	<!-- progress spinner -->
+	<div id="loading">
+	  <div id="loadingcontent">
+	    <p id="loadingspinner">
+	      Running calculation ...
+	    </p>
+	  </div>
+	</div>
+
+
+      </div> <!-- End main page content container -->
+      
+    </div> <!-- end wrap -->
+    
+    <!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+    <!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+  </body>
+</html>
+

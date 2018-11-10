@@ -1,0 +1,71 @@
+<tr><td style="text-align:left; border-style:none" colspan="4">
+<script type="text/javascript">
+    var ligandList = %(ligandlist)s;
+/*
+    $('.check_box_div').on("click", function() {
+        var id = $(this).attr('id');
+        var style = $('#liganddiv').attr("style");
+        if (($(this).is(':checked') && style == 'display: none;') ||
+            (!$(this).is(':checked') && style != 'display: none;')) {
+            $('#liganddiv').toggle('fast');
+        }
+    });
+
+    $('.add_context').on("click", function() {
+        list = $(this).attr('id').split('_');
+        var id = list[1];
+        if (ligandList.indexOf(id) == -1) {
+            ligandList.push(id);
+        }
+        if (ligandList.length > 0) {
+            var context = $('#ligand_template').html();
+            if (ligandList.length > 1) {
+                context = context.replace('group exists', 'groups exist');
+            }
+            for (var i = 0; i < ligandList.length; ++i) {
+                 context +=  $('#ligand_' + ligandList[i]).html(); + '\n'
+            }
+            $('#%(name)s').html(context);
+        }
+    });
+
+    $('.remove_context').on("click", function() {
+        list = $(this).attr('id').split('_');
+        var id = list[1];
+        var idx = ligandList.indexOf(id);
+        if (idx != -1) {
+            ligandList.splice(idx, 1);
+        }
+        if (ligandList.length == 0) {
+            $('#%(name)s').html('');
+        } else {
+            var context = $('#ligand_template').html();
+            if (ligandList.length > 1) {
+                context = context.replace('group exists', 'groups exist');
+            }
+            for (var i = 0; i < ligandList.length; ++i) {
+                 context +=  $('#ligand_' + ligandList[i]).html(); + '\n'
+            }
+            $('#%(name)s').html(context);
+        }
+    });
+*/
+</script>
+
+<div id="liganddiv" style="%(style)s">
+<p id="ligand_template" style="display: none;">
+%(template_context)s
+</p>
+%(ligand_context)s
+<table>
+%(table_context)s
+</table>
+<!--
+<input class="add_context" type="button" value ="Add" />
+<input class="remove_context" type="button" value ="Remove" />
+-->
+<br />
+<textarea style="font-family: Courier, Serif;" id="%(name)s" name="%(name)s" cols="120" rows="10" wrap>%(ligand_text)s</textarea>
+</div>
+</td></tr>
+<tr><td style="text-align:left; border-style:none" colspan="4">&nbsp;</td></tr>

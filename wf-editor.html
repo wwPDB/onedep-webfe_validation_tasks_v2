@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+    <title>Validation Tasks Module</title>
+  </head>
+  
+  <body>
+    <div id="wrap">
+      
+      <!-- Common page navigation -->
+      <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+      
+      
+      <div class="container">        <!-- Begin main page content container -->
+	<div class="page-header"> 
+	  <h3>Validation Tasks  <small>Web mmCIF Editor</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+	</div>
+
+
+	  <div id="mainContent">
+	    <div id="edit-dialog" title="Edit Options">
+	      <div><span id="edit-button-label"> </span> &nbsp;&nbsp; 
+		<button class="btn btn-primary" id="edit-opener-button">Open editor with annotation view</button>
+		&nbsp;&nbsp; <button class="btn btn-primary" id="edit-opener-button-alt">Open editor with summary view</button>
+	      </div>
+	    </div>
+
+	  </div> <!-- end  mainContent-->
+
+      </div> <!-- End main page content container -->
+      
+    </div> <!-- end wrap -->
+    <iframe id="edit-frame" class="displaynone" allowtransparency="true" frameborder="0" scrolling="auto" style="width:100%;height:100%"></iframe>
+
+    <!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+    <!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+
+  </body>
+</html>

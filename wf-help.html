@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+    <title>Validation Tasks Module</title>
+  </head>
+  
+  <body>
+    <div id="wrap">
+      
+      <!-- Common page navigation -->
+      <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+      
+      
+      <div class="container">        <!-- Begin main page content container -->
+	<div class="page-header"> 
+	  <h3>Validation Tasks  <small>Help Information</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+	</div>
+
+
+	<div class="row">
+
+	  <a id="upload" ></a>
+	  <h3>Upload</h3>
+	  <p>
+            Provides upload option of model coordinate file.  Various flavors of PDBx/mmCIF format are supported.
+            Files with non-standard file names will be renamed by project conventions using the placeholder 
+            D_0000000000 data set identifier.      
+          </p>
+          <p>Dataset may also be identified by data set id code.   The latest files in the archive corresponding
+             to the identifier will be be downloaded.
+          </p>
+
+	  <hr />
+
+	  <a id="report" ></a>
+	  <h3>Validation Report</h3>
+	  <p>
+	    Create the wwPDB validation report and associated data and image files.
+	  </p>
+
+
+	  <a id="checks" ></a>
+	  <h3>Check Reports</h3>
+	  <p>
+	    Create check reports for dictionary compliance, geometry, special positions, 
+	    miscellaneous consistency checks, and DCC SF checks (incl. refinement).
+	  </p>
+
+	  <a id="viewer" ></a>
+	  <h3>Viewer 3D</h3>
+	  <p>
+	    View input model coordinate data using the JMol applet or JSMol.  
+	  </p>
+	  <hr />
+
+	  <a id="download" ></a>
+	  <h3>Download</h3>
+	  <p>
+	    Download copies of the updated model file containing calculated annotations, coordinates of any calculated
+	    assemblies, analysis file created by the Pisa program, site environment file from <i>getsite</i>, and the 
+	    log files from each of the annotation task calculations.
+
+	  </p>
+	  <hr />
+	  <br />
+	  <!-- END TEXT HERE  -->
+
+	</div>
+
+      </div> <!-- End main page content container -->
+      
+    </div> <!-- end wrap -->
+    
+    <!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+    <!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+  </body>
+</html>
+

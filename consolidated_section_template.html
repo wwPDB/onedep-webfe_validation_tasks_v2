@@ -1,0 +1,92 @@
+<!--    ############################################################################################################################ -->
+<!--  Begin consolidated report content -->
+	<div id="consolidated-report-section" class="bs-docs-container">
+	  <div class="row">
+
+            <div class="col-md-2">
+              <div class="bs-sidebar hidden-print" role="complementary">
+		<ul class="nav bs-sidenav">
+		  <li><a href="#sec_1">Entry report</a></li>
+		  <li><a href="#sec_2">X-ray Exp</a></li>
+		  <li><a href="#sec_3">Geometry</a></li>
+		  <li><a href="#sec_4">Miscellaneous</a></li>
+		  <li><a href="#sec_4a">Special Positions</a></li>
+		  <li><a href="#sec_5">Dictionary (V5)</a></li>
+		  <li><a href="#sec_6a">Dictionary (V50)</a></li>
+		  <li><a href="#sec_7">Format</a></li>
+		  <li><a href="#sec_8">Downloads</a></li>
+		</ul>
+	      </div>
+	    </div>
+
+
+	    <div class="col-md-10">  	    <!-- Starting content sections here -->
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_1">Entry Report</h3>
+		</div>
+		%(model)s
+	      </div>
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_2">X-ray Experimental Data Report</h3>
+		</div>
+		%(dcc-report)s
+	      </div>
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_3">Geometry Report</h3>
+		</div>
+		%(geometry-check-report)s
+	      </div>
+
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_4">Miscellaneous Check Report</h3>
+		</div>
+		%(misc-check-report)s		    
+	      </div>
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_4a">Special Position Check Report</h3>
+		</div>
+		%(special-position-report)s		    
+	      </div>
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_5">Dictionary V5 Internal Check Report</h3>
+		</div>
+		%(dict-check-report)s		    
+	      </div>
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_6a">Dictionary V50 Public Check Report</h3>
+		</div>
+		%(dict-check-report-next)s		    
+	      </div>
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_7">Format Check Report</h3>
+		</div>
+		%(format-check-report)s		    
+	      </div>
+
+	      <div class="bs-docs-section">
+		<div class="page-header">
+		  <h3 id="sec_8">Downloads</h3>
+		</div>
+		    %(downloads)s		    		
+	      </div>
+
+	    </div> <!-- end div containing sections -->
+	    
+	  </div> <!-- end div containing nav and sections -->
+	</div>   <!-- section container  -->

@@ -1,0 +1,101 @@
+<script type="text/javascript">
+
+var text_map = { %(text_map)s };
+
+function update_text_area(option, index, textid) {
+    var text = '';
+    if (text_map.hasOwnProperty(index + '_text')) {
+         text = text_map[index + '_text'].replace('$line_break$', '\n', 'g');
+    }
+    if (option == 'add' && text_map.hasOwnProperty(index + '_additional_text')) {
+         if (text != '') text += '\n\n';
+         text += text_map[index + '_additional_text'].replace('$line_break$', '\n', 'g');
+    }
+    $('#' + textid).html(text);
+}
+</script>
+
+<p id="letter_header" style="display: none;">
+%(letter_header)s
+</p>
+
+<p id="major" style="display: none;">
+%(major)s
+</p>
+
+<p id="major_release" style="display: none;">
+%(major_release)s
+</p>
+
+<p id="major_minor_addition" style="display: none;">
+%(major_minor_addition)s
+</p>
+
+<p id="minor" style="display: none;">
+%(minor)s
+</p>
+
+<p id="minor_release" style="display: none;">
+%(minor_release)s
+</p>
+
+<p id="letter_footer" style="display: none;">
+%(letter_footer)s
+</p>
+
+<span style="display: inline;" id="full_letter">
+
+<form id="correspondenceForm">
+
+<table>
+<tr>
+<td style="border-style:none;width:270px;"><input type="button" class="btn btn-primary control-button" id="control_button1" value="Show Select Option" /></td>
+<td style="border-style:none"><input class="btn btn-primary" type = "submit" value = "Submit" /></td>
+</tr>
+</table>
+<br /> <br />
+
+<textarea style="display: inline; font-family: Courier, Serif;" id="full_text" name="full_text" cols="120" rows="%(rows)s" wrap>
+%(full_text)s
+</textarea>
+
+<br /> <br />
+<table>
+<tr>
+<td style="border-style:none;width:270px;"><input type="button" class="btn btn-primary control-button" id="control_button2" value="Show Select Option" /></td>
+<td style="border-style:none"><input class="btn btn-primary" type = "submit" value = "Submit" /></td>
+</tr>
+</table>
+
+</form>
+
+</span>
+
+<span style="display: none;" id="select_option">
+
+<form id="selctionForm">
+
+<table>
+<tr>
+<td style="border-style:none;width:270px;"><input type="button" class="btn btn-primary control-button" id="control_button3" value="Show Select Option" /></td>
+<td style="border-style:none"><input class="btn btn-primary update-letter" type = "button" value = "Update Letter" /></td>
+</tr>
+</table>
+<br /> <br />
+
+<table>
+%(slection_text)s
+</table>
+
+<br /> <br />
+
+<table>
+<tr>
+<td style="border-style:none;width:270px;"><input type="button" class="btn btn-primary control-button" id="control_button4" value="Show Select Option" /></td>
+<td style="border-style:none"><input class="btn btn-primary update-letter" type = "button" value = "Update Letter" /></td>
+</tr>
+</table>
+
+</form>
+
+</span>

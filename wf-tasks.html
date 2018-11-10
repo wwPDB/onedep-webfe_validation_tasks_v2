@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+    <title>Validation Tasks Module</title>
+  </head>
+  
+  <body>
+    <div id="wrap">
+      
+      <!-- Common page navigation -->
+      <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+      
+      
+      <div class="container">        <!-- Begin main page content container -->
+	<div class="page-header"> 
+	  <h3>Validation Tasks  <small>All Tasks</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+	</div>
+
+
+
+	<!--  Tasks section -->
+	<div id="task-alt-dialog"></div>
+
+	<div id="task-dialog" title="Task Calculations">
+
+          <!-- Solvent calculation form -->
+          <form id="solvent-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>Solvent position calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="solvent-task-form-inp-1">Options:</label>
+		<input id="solvent-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+	     
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+          <!-- Link calculation form -->
+          <form id="link-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>Link calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="link-task-form-inp-1">Options:</label>
+		<input id="link-task-form-inp-1" class="form-control my-task-form-args" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <form id="secstruct-task-form"  enctype="multipart/formdata" class="form-inline" role="form">   
+            <fieldset>
+	      <legend>Secondary structure calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="secstruct-task-form-inp-1">Topology file name</label>
+		<input id="secstruct-task-form-inp-1" class="form-control" type="file" name="topfile"  value="" size="60" /> 
+	      </div>
+	      <div class="form-group">	      
+		<label class="control-label" for="secstruct-task-form-inp-2">File type</label> 
+		<select id="secstruct-task-form-inp-2" class="form-control" name="topfiletype" columns="3">
+                  <option selected="selected"    value="top">Topology</option>
+		</select>
+	      </div>
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+          <!-- NA features calculation form -->
+          <form id="nafeature-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>NA features calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="nafeature-task-form-inp-1">Options:</label>
+		<input id="nafeature-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <!-- Site calculation form -->
+          <form id="site-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>Site calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="site-task-form-inp-1">Options:</label>
+		<input id="site-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <!-- Dictioinary check form -->
+          <form id="dict-check-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>Dictionary check <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="dict-check-task-form-inp-1">Options:</label>
+		<input id="dict-check-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+          <!-- Extra check form -->
+          <form id="extracheck-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>Extra geometric and consistency checks <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="extracheck-task-form-inp-1">Options:</label>
+		<input id="extracheck-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <!-- Validation report form -->
+          <form id="valreport-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>Validation report <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="valreport-task-form-inp-1">Options:</label>
+		<input id="valreport-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <!-- Map calculation form -->
+          <form id="mapcalc-task-form" class="form-inline" role="form"> 
+            <fieldset>
+	      <legend>Map calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="mapcalc-task-form-inp-1">Options:</label>
+		<input id="mapcalc-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <!-- DCC calculation form -->
+          <form id="dcc-calc-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>DCC calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+	      <div class="form-group">	      
+		<label class="control-label" for="dcc-calc-task-form-inp-1">Options:</label>
+		<input id="dcc-calc-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <!-- DCC refine calculation form -->
+          <form id="dcc-refine-calc-task-form" class="form-inline" role="form">  
+            <fieldset>
+	      <legend>DCC refinement calculation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+	      <div class="form-group">	      
+		<label class="control-label" for="dcc-refine-calc-task-form-inp-1">Options:</label>
+		<input id="dcc-refine-calc-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+            </fieldset>
+          </form>
+
+          <!-- Move by sym_op -->
+          <form id="trans-coord-task-form"  enctype="multipart/formdata" class="form-inline" role="form">   
+            <fieldset>
+	      <legend>Transform Coordinates <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="trans-coord-task-form-inp-1">Instruction file name</label>
+		<input id="trans-coord-task-form-inp-1" class="form-control" type="file" name="transfile"  value="" size="60" /> 
+	      </div>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="trans-coord-task-form-inp-2">File type</label> 
+		<select id="trans-coord-task-form-inp-2" class="form-control" name="transfiletype" columns="3">
+                  <option selected="selected"    value="symop">Symmerty Operators</option>
+                  <option                        value="matrix">Matrix Operators</option>
+		</select>
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+          <!-- Special position calculation form -->
+          <form id="special-position-task-form" class="form-inline" role="form"> 
+            <fieldset>
+	      <legend>Special position check <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="special-position-task-form-inp-1">Options:</label>
+		<input id="special-position-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+
+          <!-- Special position calculation form -->
+          <form id="reassign-altids-task-form" class="form-inline" role="form"> 
+            <fieldset>
+	      <legend>Reassign Alt Ids <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="reassign-altids-task-form-inp-1">Options:</label>
+		<input id="reassign-altids-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+
+          <!-- Isotropic B-value replacement form -->
+          <form id="biso-full-task-form" class="form-inline" role="form"> 
+            <fieldset>
+	      <legend>Isotropic B-value replacement <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="biso-full-task-form-inp-1">Options:</label>
+		<input id="biso-full-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+          <!-- Merge replacement coordinates -->
+          <form id="merge-xyz-task-form"  enctype="multipart/formdata" class="form-inline" role="form"> 
+            <fieldset>
+	      <legend>Merge Replacement Coordinates <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="merge-xyz-task-form-inp-1">Replacement coordinate file name</label>
+		<input id="merge-xyz-task-form-inp-1" class="form-control" type="file" name="xyzfilename"  value="" size="60" /> 
+	      </div>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="merge-xyz-task-form-inp-2">File format</label> 
+		<select id="merge-xyz-task-form-inp-2" class="form-control" name="xyzfileformat" columns="3">
+                  <option selected="selected"    value="cif">PDBx/mmCIF</option>
+                  <option                        value="pdb">PDB</option>
+		</select>
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+          <!-- Merge replacement coordinates -->
+          <form id="terminal-atoms-task-form"  enctype="multipart/formdata" class="form-inline" role="form"> 
+            <fieldset>
+	      <legend>Replace Terminal Atoms <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="terminal-atoms-task-form-inp-1">Option</label> 
+		<select id="terminal-atoms-task-form-inp-1" class="form-control" name="terminalatomsoption" columns="3">
+                  <option selected="selected"    value="delete">delete</option>
+                  <option                        value="rename">rename</option>
+		</select>
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+          <form id="geom-valid-task-form" class="form-inline" role="form"> 
+            <fieldset>
+	      <legend>Update geometry validation <a href="wf-help.html"> <span class="glyphicon glyphicon-info-sign pull-right"></span> </a> </legend>
+
+	      <div class="form-group">	      
+		<label class="control-label" for="geom-valid-task-form-inp-1">Options:</label>
+		<input id="geom-valid-task-form-inp-1" class="form-control" type="text" name="task-form-args"  value="" size="80" placeholder="Command line arguments"/> 
+	      </div>
+
+              <input class="btn btn-primary my-task-form-submit"  type="submit" value="Run"/> 
+              <div class="my-task-form-status"></div>
+              <div class="my-task-form-links"></div>
+
+            </fieldset>
+          </form>
+
+	</div> <!-- end of task dialog -->
+
+	<!-- progress spinner -->
+	<div id="loading">
+	  <div id="loadingcontent">
+	    <p id="loadingspinner">
+	      Running calculation ...
+	    </p>
+	  </div>
+	</div>
+
+
+      </div> <!-- End main page content container -->
+      
+    </div> <!-- end wrap -->
+    
+    <!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+    <!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+  </body>
+</html>
+

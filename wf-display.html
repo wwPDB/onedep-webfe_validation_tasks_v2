@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <!--#include virtual="/validation_tasks_v2/includes/head_common_bs.html"-->
+    <title>Validation Tasks Module</title>
+  </head>
+  
+  <body>
+    <div id="wrap">
+
+      <!-- Common page navigation -->
+      <!--#include virtual="/validation_tasks_v2/includes/page_header_bs.html"-->
+
+
+      <div class="container">        <!-- Begin main page content container -->
+	<div class="page-header"> 
+	  <h3>Validation Tasks  <small>Display Options</small> 	    <small id="span_identifier" class="pull-right displaynone"> </small></h3>
+	</div>
+
+	
+	<div class="row">
+	  <span id="display-button-label"></span> &nbsp;&nbsp; 
+	  <button class="btn btn-primary" id="jmol-opener-button"> Open in Jmol </button>
+	  <button class="btn btn-primary" id="jsmol-opener-button-1"> Open in Jsmol </button>  &nbsp;&nbsp;
+	  <button class="btn btn-primary" id="jmol-with-map-opener-button"> Open in Jmol with Map </button> &nbsp;&nbsp; 
+	  <button class="btn btn-primary" id="jsmol-with-map-opener-button-1"> Open in Jsmol with Map (testing)</button> &nbsp;&nbsp; 
+	</div>
+
+    
+	<!--  JMol section -->
+	<div id="jmol-dialog" title="JMol View">    </div>
+	
+	<!--  JsMol section -->
+	<div id="jsmol-dialog-1" title="JSmol View"> </div>
+
+	
+      </div> <!-- End main page content container -->
+      
+    </div> <!-- end wrap -->
+    
+    <!--#include virtual="/validation_tasks_v2/includes/page_javascript_bs.html"-->
+    <!--#include virtual="/validation_tasks_v2/includes/page_footer_bs.html"-->
+  </body>
+</html>
+

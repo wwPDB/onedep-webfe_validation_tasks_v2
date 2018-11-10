@@ -1,0 +1,730 @@
+data_validation_question
+#
+loop_ 
+_letter_template.type
+_letter_template.text
+letter_em_only
+;Dear Depositors,
+
+Your EMDB entry ID %(emdbid)s which corresponds to Deposition ID %(entryid)s has been annotated and the status
+is now %(status_em)s. 
+
+Entry title:   %(title_em)s
+
+Entry authors:   %(author_em)s
+
+** Please review the curated data and either reply with your approval or let us know if any additional changes are
+   required.
+
+** When the primary citation associated with your entry is published, please notify us through the deposition system
+   and provide the PubMed ID (if available), journal name, volume, page numbers, title, authors list and DOI.
+
+** Please be aware that all public access to your entry will be via the accession code, %(emdbid)s, which is distinct
+   from the deposition number.
+
+Thank you for your attention.
+
+;
+#
+header_pdb_em
+;Dear Depositors,
+
+Thank you for depositing your structure and map, PDB ID %(pdbid)s and %(emdbid)s with the wwPDB and EMDB.
+
+Entry title:   PDB:  %(title)s
+               EMDB: %(title_em)s
+
+Entry authors: PDB:  %(author)s
+               EMDB: %(author_em)s
+
+EMDB Annotation comments: 
+
+** Please review the curated data and either reply with your approval or let us know if any additional changes are
+   required.
+
+** Your map and supporting files will be held until the publication of your primary citation or until 12 months
+   after deposition.
+
+PDB Annotation comments:
+
+Please review the processed files and validation report in PDF format  based on the recommendations of the
+wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
+any corrections, please send a message through the communication system requesting that we open the deposition
+interface for you to upload new coordinates and make any changes.
+;
+#
+header 
+;Dear Depositors,
+
+Thank you for depositing your structure, PDB ID %(pdbid)s and Deposition ID %(entryid)s, with the wwPDB.
+
+Entry title:   %(title)s
+
+Entry authors:   %(author)s
+
+wwPDB encourage depositors to provide ORCID identifiers and information on relevant grants funding their research when
+depositing PDB data. ORCID identifiers are unique to each researcher; usage will help avoid ambiguity in attributing
+the correct authorship of PDB, BMRB, and EMDB entries. In order to register an ORCID, please visit http://orcid.org.
+
+Please review the processed files and validation report in PDF format  based on the recommendations of the
+wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
+any corrections, please send a message through the communication system requesting that we open the deposition
+interface for you to upload new coordinates and make any changes.
+;
+#
+major
+;Some major issues were raised during data processing which must be resolved prior to release of the file. The
+outstanding issues are summarized below. All correspondence for revisions including revised coordinates, and/or
+supporting data factor files should be uploaded and resubmitted through the deposition interface.
+
+Outstanding Issues:
+;
+#
+major_minor_addition
+;In addition, please verify the following:
+;
+#
+major_release
+;If we do not hear from you and a paper is published within a year citing this entry, the entry will be released
+with a CAVEAT record. Otherwise this entry will be automatically withdrawn at the one year anniversary of the
+deposition.
+;
+#
+minor
+;No major issues were raised during data processing. A summary of some of the key annotations in your entry is
+shown below. Please verify that these are correct. If we do not hear from you within two weeks, we will consider
+this entry to have been approved by you. The entry will then be released according to the release/hold instructions
+you have provided.
+
+Summary:
+;
+#
+pre_release_yes "** The macromolecular sequence(s) for your entry will be displayed in wwPDB status reports."
+pre_release_no
+;** The macromolecular sequence(s) for your entry will NOT be displayed in wwPDB status reports until the release
+   of your entry.
+;
+#
+release_hold    "** Your coordinates and supporting files will be held until: %(hold_date)s"
+release_hpub 
+;** Your coordinates and supporting files will be held until the publication of your primary citation or until
+   12 months after deposition.
+;
+release_rel     "** Your coordinates and supporting files will be released immediately."
+release_unknown "** No release information has been provided for your entry."
+#
+signature
+;When the primary citation associated with your entry is published, please notify us through the deposition
+system and provide the PubMed ID (if available), journal name, volume, page numbers, title, authors list and DOI.
+
+Thank you for your attention.
+
+;
+#
+loop_
+_rcsb_question_category.major_flag
+_rcsb_question_category.question
+_rcsb_question_category.text
+_rcsb_question_category.additional_text
+_rcsb_question_category.text_index
+_rcsb_question_category.add_remove_button
+n "Sequence"
+;Please verify that the sample sequence in the entity_poly section of the coordinate CIF file includes all
+residues used in the experiment including expression tags and residues missing due to disorder.
+;
+? ? ?
+
+n "Assembly"
+;The assembly predicted by PISA %(oligomeric_pisa)s.
+The assembly provided by author %(oligomeric_author)s.
+;
+;PDB policy requires that the position of each chain in the asymmetric unit be identical to the position of an
+instance of that chain in a biological assembly. This maximizes the resemblance of the asymmetric unit to the
+biological assembly and minimizes the number of coordinate transformations required to generate the biological
+assembly or assemblies from the contents of the asymmetric unit.
+
+(1) Therefore, we have moved chain 'INSERT HERE' to symmetry-equivalent position 'INSERT HERE' within the
+asymmetric unit.
+
+(2) Therefore, we request that you please move chain 'INSERT HERE' to symmetry-equivalent position 'INSERT HERE'
+within the asymmetric unit and correct (by refinement) the TLS and anisotropy records accordingly.
+;
+assembly "PDB Policy"
+
+y "Free text question 1" ?  ? ? ?
+
+y "Free text question 2" ?  ? ? ?
+
+y "Free text question 3" ?  ? ? ?
+
+n "Supersede/Obsolete"
+;You indicated that entry '%(pdbid)s' is to replace entry '%(replace_pdb_id)s'. Please verify that you would like entry '%(pdbid)s' to
+replace entry '%(replace_pdb_id)s' and that entry '%(replace_pdb_id)s' should be obsolete. Please note that the two entries should share
+the same principal investigator or group leader for this request.
+;
+? ? ?
+
+n "Sequence Database Discrepancy"
+;The reported sample sequence differs from reference sequence (%(accession_code)s). Please confirm all sequence
+advisories listed below (as well as in section 1 of the validation report) are annotated correctly.
+
+%(seqadv)s
+;
+? ? ?
+
+y "Structure Factor - high R-factors, low correlation"
+;Section 4 (Data refinement and statistics) of the validation report shows high R-factors and/or low correlation
+coefficient.  The correct structure factor file should be re-uploaded at the deposition interface.
+;
+? ? ?
+
+y "Structure Factor - incomplete data"
+;Section 4 (Data refinement and statistics) of the validation report indicates that the structure factor file is
+incomplete. Please upload the correct structure factor file at the deposition interface.
+;
+? ? ?
+
+y "Atomic Clashes"
+;Section 5.2 (Close contacts) of the validation report includes at least one physically unrealistic interatomic
+distance. Please upload a new coordinate file that resolves any issues or send correspondence clarifying the
+situation. 
+
+%(atom_clash)s
+;
+? ? ?
+
+y "Polymer Geometry"
+;Section 5.1 (Standard geometry) of the validation report lists outliers that have Z-score > 5 with the geometry
+in your polymer chains. Please upload a corrected file at the deposition interface.
+
+%(polymer_geometry)s
+;
+? ? ?
+
+y "Peptide Linkage and Nucleic Acid Linkage"
+#;The C-N bonds and/or O-P bonds listed below lie outside of the accepted range for the peptide bond (1.20-1.60)
+#and nucleic acid bond (1.40-1.75). The backbone geometry needs to be corrected. A corrected coordinate file should
+#be uploaded at the deposition interface.
+#
+;%(peptide_linkage)s
+
+Provide a corrected sample sequence or request unlocking of your deposition interface so that you can upload
+corrected coordinates in which these residues are not linked.
+;
+? ? ?
+
+y "Large Gap Distance" "%(gap_warning)s"  ? ? ?
+
+
+n "Ligand Identity"
+;The following chemical group exists in your deposition. Please review section 2 of the validation report
+(Entry composition) to verify ligand chemistry.
+;
+? ? ?
+
+y "Ligand Geometry"
+;There are outstanding issues with the geometry of certain ligands in your entry.  Please refer to section 5.6
+(Ligand geometry) of the validation report. It is possible that your coordinates do not match the PDB chemical
+component dictionary because of errors either in your refinement dictionaries or in the assignment made by us.
+Please review section 2 (Entry composition) to ensure that the proper ligands were chosen.
+
+%(ligand_geometry)s
+
+If necessary, please upload new coordinates or communicate with us regarding anything unusual (i.e. covalent
+binding) about your ligands or other non-polymer residues.
+;
+? ? ?
+
+y "Chirality Error"
+;Chirality errors in your coordinates have been indicated in section 5.1 (Standard geometry) or 5.4 (nonstandard
+residues in protein, DNA, RNA chains) or 5.6 (Ligand geometry) in the PDF validation report. These errors are
+highlighted in the database_PDB_caveat section of the coordinate CIF file.
+
+%(caveat)s
+
+Please upload new coordinates to resolve this issue.
+;
+? ? ?
+
+n "Phi/Psi Torsion Angles"
+;Section 5.3 (torsion angles) of the validation report highlights an unusually large number of Ramachandran
+outliers that you may wish to address. Please upload a new coordinate file with any corrections.
+;
+? ? ?
+
+n "Fit of model to data RSR Z-score"
+;Section 6 (Fit of model and data) of the validation report indicates a number of RSR-Z outliers in an electron
+density map calculated from your data. Please examine these outliers.
+
+%(z_score)s
+;
+? ? ?
+
+y "Discrepancy Between Reported and Calculated R and/or free R"
+;There is a significant discrepancy between the reported and calculated R and/or Rfree values. Please review the
+validation report and upload a corrected coordinate and/or structure factor file at the deposition interface.
+;
+? ? ?
+
+y "Chemical shift/Model sequence mapping"
+;The sample sequence in the entity_poly section of the coordinate CIF file is incomplete when compared to the
+sequence in the chemical shift file.  Please provide the complete sample sequence which includes all residues
+used in the experiment including expression tags and residues missing due to disorder.
+;
+? ? ?
+
+n "Chemical shift referencing"
+;Please review section 7.1.2 in the validation pdf report for suggested chemical shift referencing corrections.
+;
+? ? ?
+
+n "Statistically unusual chemical shifts"
+;Please review the statistically unusual chemical shifts listed in section 7.1.4 in validation pdf report.
+;
+? ? ?
+
+y "Occupancy greater than one"
+;The overall occupancy of the following atoms is greater than 1.0. Please examine the model and re-upload updated
+file if necessary.
+
+%(large_occupancy)s
+;
+? ? ?
+
+y "Hydrogen Atom"
+;Hydrogens are not present in this NMR model. Please provide updated model.
+;
+? ? ?
+
+n "Distant Waters"
+#;Water molecules that are more than 5 Angstrom away from the nearest polymer chain are listed in
+#distant_solvent_atoms section of the coordinate CIF file. Please review these outliers. 
+;Water molecules that are more than 5 Angstrom away from the nearest non-solvent hydrogen-bonding partner are
+listed below. Please review these potentially distant waters, and revisit those that do not belong to a second,
+third, etc. solvation shells (bound to other waters).
+
+%(distant_water)s
+;
+? ? ?
+
+n "Polymer Residue Identity Update"
+#;Please review the update on polymer residue identity as shown below:
+;We made the following update(s) on polymer residue identity:
+
+%(updated_polymer_residue_name)s
+
+Please verify that these changes are correct.
+;
+? ? ?
+
+#n "Mismatches Involving ALA/GLY"
+#;Mismatches involving alanine and/or glycine were found between the provided sequence(s) and the sequence(s) present
+#in the coordinates. Assuming the side chains of these residues are missing due to disorder, the residue names in the
+#coordinates have been changed to match the residue names in the provided sequence.
+#;
+#? ? ?
+
+n "Free text question 4" ?  ? ? ?
+
+n "Free text question 5" ?  ? ? ?
+
+n "Free text question 6" ?  ? ? ?
+
+n "Keywords"
+;Verify the keywords and make sure that they reflect the primary functional and structural features of the structure.
+;
+? ? ?
+
+n "Missing and/or Inconsistent Values"
+;%(values)s
+;
+? ? ?
+
+n "Inconsistent Resolution Limits"
+;The reported high resolution limits for refinement and for data collection are inconsistent (Section 4 of the
+validation report). Please clarify and provide correct values.
+;
+? ? ?
+
+n "No Database Sequence Match"
+;Using BLAST, we were unable to find an appropriate sequence database match to your provided sequence(s) in the UniProt
+database. Please note that we only use UniProt as a sequence database reference. You may submit your sequence information
+to UniProt via SPIN (the UniProtKB submission tool) at http://www.ebi.ac.uk/swissprot/Submissions/spin/index.jsp for
+directly sequenced proteins, or to EMBL/GenBank/DDBJ if the nucleotide sequence is available.
+;
+? ? ?
+
+n "Terminal Oxygen(s)"
+;Terminal oxygen (OXT) atoms which are not part of the terminal residue of a polypeptide chain either have been removed
+or have been relabeled as part of the next residue in the chain.
+;
+? ? ?
+
+n "LINK Records"
+;Verify the link records.
+
+%(link)s
+;
+? ? ?
+
+n "Data completeness"
+;There is a large difference between reported (%(reported_completeness)s%%) and calculated (%(calculated_completeness)s%%) values for data completeness.
+Please advise.
+;
+? ? ?
+
+n "Data Collection Date"
+;Provide the data collection date for the experiment.
+;
+? ? ?
+
+n "Atoms on Special Positions"
+;Each of the following atoms is on a special position.  Please check the occupancy of these atoms.
+
+%(special_atoms)s
+;
+? ? ?
+
+n "Zero or Low Occupancy Ligand"
+#;The following ligands have occupancy of 0.1 or lower. We suggest that you upload new coordinates in which these ligands
+#either have corrected occupancies or have been removed. Otherwise, a CAVEAT record will be included in the entry.
+;The following ligands have occupancy of 0.1 or lower.
+
+%(zero_occupancy_ligand)s
+
+Advise if zero-occupancy ligands are to be removed or you wish to upload new coordinates with corrected occupancies.
+Otherwise, a CAVEAT record may be included for the zero-occupancy ligands.
+;
+? ? ?
+
+n "Zero Occupancies" 
+#;Please note that your coordinate file contains atoms with zero occupancy. Under normal circumstances, we prefer
+#removing such atoms and listing them as missing atoms. Please let us know if you would like us to remove these atoms
+#from the coordinates and list them as unobserved in the coordinate CIF file.
+;Note that your coordinate file contains atoms with zero occupancy.
+
+%(zero_occupancy)s
+
+Let us know if you would like us to remove these atoms and list them as unobserved.
+;
+? ? ?
+
+n "Header"
+;The header '%(header)s' has been selected for the entry.  If this is not correct, select a header from the list
+available in: ftp://ftp.wwpdb.org/pub/pdb/doc/format_descriptions/class.dat.
+;
+? ? ?
+
+n "Cis-Peptides"
+#these peptide are intended to be cispeptides.  Cis-pro is no longer accepted as CPR and will be changed to PRO.
+;The following peptides were found to be in the cis conformation, and will be annotated as such.  Please confirm that
+these peptide are intended to be cispeptides.
+ 
+%(cispep)s
+;
+? ? ?
+
+n "N-terminal Sequence"
+;The residues 'INSERT SEQ' were added to the N-terminus of the sequence on the assumption that these residues are
+missing from the coordinates due to disorder. Is this correct?
+;
+? ? ?
+
+n "C-terminal Sequence"
+;The residues 'INSERT SEQ' were added to the C-terminus of the sequence on the assumption that these residues are
+missing from the coordinates due to disorder. Is this correct?
+;
+? ? ?
+
+n "Source" "Verify the source organism." ? ? ?
+
+n "Expression Host"
+;If the protein has been genetically manipulated, provide the scientific name for the expression host organism and
+any available details regarding the plasmid used.
+;
+? ? ?
+
+n "MAD Wavelengths" "Provide all the wavelengths for the MAD experiment." ? ? ?
+
+n "Starting Model" "Please provide starting model (PDB ID code, if available) used for molecular replacement." ? ? ?
+
+n "Structure Determination"
+;Please provide details of the method used to determine the structure. If molecular replacement was used please provide
+the ID code (if available) of the PDB entry used as a starting model.
+;
+? ? ?
+
+n "Software" "%(software)s" ? ? ?
+
+n "Only One Contact Author" 
+#;There is only one contact author information provided for this deposition. Please provide more contact authors
+#if possible.
+;There is only one contact author and PI information provided for this deposition. Please confirm that you are the sole
+PI and no other authors need to be informed regarding process of the release of the entry, otherwise please provide
+additional authors that should be informed.
+;
+? ? ?
+
+n "Citation Title/Authors"
+;Currently the title and/or authors of the entry have also been used for the primary citation.
+;
+? ? ?
+
+n "Best Representative Conformer"
+;The best representative conformer 'INSERT NUMBER' of the ensemble was moved to MODEL 1.
+;
+? ? ?
+
+n "Matthew Coefficient"
+#;The calculated Matthews coefficient and solvent content are not within the accepted ranges. Verify that values are
+#correct.
+#;
+;The reported solvent content/Matthews coefficient (%(solvent_content)s%%/%(matthews_coefficient)s) is below/above 99%% of PDB structures of
+similar resolution and molecular weight. Please confirm that the reported value is valid.
+;
+? ? ?
+
+n "Identical Titles"
+;The title of this entry is identical to the title of one or more related entries. We encourage you to provide a unique
+title for each entry.
+;
+? ? ?
+
+n "Short Title"
+;Please provide a more detailed title for this entry.  If you wish to suppress the new title, please let us know.
+A suppressed title will not be made publicly available until the entry is released.
+;
+? ? ?
+
+n "E.C. Number" "Provide the E.C. (Enzyme Commission) number for this protein, if available." ? ? ?
+
+n "TargetDB ID" "Provide the TargetDB ID for this protein, if available." ? ? ?
+
+n "BMRB ID" "Provide the BMRB ID." ? ? ?
+
+#n "Related Entries"
+#;Since you have deposited several related entries, we will wait for your response
+#to the validation report for this entry before processing the other entries, so
+#that we can incorporate the changes to all related entries.
+#;
+
+n "High B-factor Values"
+;The reported B-factor values are high. Please upload corrected coordinate and/or structure factor file(s). Otherwise,
+please advise.
+;
+? ? ?
+
+n "Zero B-factor Values" 
+;The reported B-factor values are zero for the following atoms:
+
+%(zero_b_factor)s
+
+Please re-upload corrected coordinate file. Otherwise, please advise.
+;
+? ? ?
+
+n "Fixed Residual B"
+;The PDB format requires that the B-factor column contain the full B factor rather than a residual B factor. As part
+of data processing, the B factors in this entry have been converted to full B factors. You may send new coordinates
+with full B factors if you prefer to correct them yourself.
+;
+? ? ?
+
+n "Missing TLS Records"
+;ANISOU records exists, but there are no TLS records. Provide coordinate file with valid TLS header if TLS was
+used in the refinement.
+;
+? ? ?
+
+#n "Change of Status for PSI"
+#;We have changed the status of the entry to REL, since your submission is a PSI
+#project. According to PSI policy, these entries should be released immediately.
+#;
+#
+loop_
+_token_question_mapping.token
+_token_question_mapping.from_corres_info
+_token_question_mapping.additional_text
+_token_question_mapping.question
+accession_code                  y    ?    ?
+atom_clash                      y    ?    "Atomic Clashes"
+author                          y    ?    ?
+author_em                       y    ?    ?
+author_release_sequence_code    y    ?    ?
+author_release_status_code      y    ?    ?
+calculated_completeness         y    ?    ?
+caveat                          y    ?    "Chirality Error"
+cell                            y    ?    ? 
+cispep                          y    ?    "Cis-Peptides"
+completeness_warning            y    ?    "Data completeness"
+contact_author_warning          y    ?    "Only One Contact Author"
+"data_collection_date"          y    ?    "Data Collection Date"
+determine_method                y    ?    "Structure Determination"
+distant_water                   y    ?    "Distant Waters"
+emdbid                          y    ?    ?
+entryid                         y    ?    ?
+gap_warning                     y    ?    "Large Gap Distance"
+header                          y    ?    "Header"
+high_b_factor                   y    ?    "High B-factor Values"
+hold_date                       y    ?    ?
+large_occupancy                 y    ?    "Occupancy greater than one"
+ligand_geometry                 ?    ?    "Ligand Geometry"
+#link                            y    ?    ?    "LINK Records"
+link                            y    ?    ?
+matthews_coefficient            y    ?    "Matthew Coefficient"
+nmr_hydrogen                    y    ?    "Hydrogen Atom"
+oligomeric_author               y    ?    "Assembly"
+oligomeric_pisa                 y    ?    "Assembly"
+oligomeric_symmetry             y    y    "Assembly"
+pdbid                           y    ?    ?
+peptide_linkage                 y    ?    "Peptide Linkage and Nucleic Acid Linkage"
+polymer_geometry                ?    ?    "Polymer Geometry"
+replace_pdb_id                  y    ?    "Supersede/Obsolete"
+reported_completeness           y    ?    ?
+r_free_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
+r_work_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
+cs_sequence_mismatch            ?    ?    "Chemical shift/Model sequence mapping"
+cs_referencing                  ?    ?    "Chemical shift referencing"
+cs_statistics                   ?    ?    "Statistically unusual chemical shifts"
+seqadv                          y    ?    "Sequence Database Discrepancy"
+software                        y    ?    "Software"
+solvent_content                 y    ?    "Matthew Coefficient"
+special_atoms                   y    ?    "Atoms on Special Positions"
+starting_model                  y    ?    "Starting Model"
+status                          y    ?    ?
+status_em                       y    ?    ?
+title                           y    ?    ?
+title_em                        y    ?    ?
+title_warning                   y    ?    "Short Title"
+tls_record                      y    ?    "Missing TLS Records"
+torsion                         y    ?    "Phi/Psi Torsion Angles"
+updated_polymer_residue_name    y    ?    "Polymer Residue Identity Update"
+values                          ?    ?    "Missing and/or Inconsistent Values"
+zero_b_factor                   y    ?    "Zero B-factor Values"
+zero_occupancy                  y    ?    "Zero Occupancies"
+zero_occupancy_ligand           y    ?    "Zero or Low Occupancy Ligand"
+#z_score_ligand                  ?    ?    "Fit of model to data RSR Z-score"
+#z_score_polymer                 ?    ?    "Fit of model to data RSR Z-score"
+z_score                         ?    ?    "Fit of model to data RSR Z-score"
+#
+loop_ 
+_value_mapping.token
+_value_mapping.text
+#Missing values:
+"_refine.ls_d_res_high"                   "Please provide the high resolution limit to which the model was refined."
+"_refine.ls_d_res_low"                    "Please provide the low resolution limit to which the model was refined."      
+"_refine.ls_number_reflns_obs"            "Please provide the number of reflections satisfying the observation criterion for refinement."
+"_refine.ls_number_reflns_R_free"         "Please provide the number of reflections in the refinement free set."
+#"_refine.ls_number_reflns_R_work"         "Please provide the number of reflections in the refinement working set." 
+"_refine.ls_R_factor_obs"                 "Please provide the R-obs, R-work, R-free values."
+#"_refine.ls_R_factor_R_free"              "Please provide the R-obs, R-work, R-free values."   
+#"_refine.ls_R_factor_R_work"              "Please provide the R-obs, R-work, R-free values."
+#"_refine.pdbx_method_to_determine_struct" "Please provide the method to determine the structure."
+#
+"_refine_ls_shell.d_res_high"             "Please provide the high resolution limit of the highest resolution shell for refinement."                       
+"_refine_ls_shell.d_res_low"              "Please provide the low resolution limit of the highest resolution shell for refinement."     
+#
+"_reflns.d_resolution_high"               "Please provide the high resolution limit to which the data were collected."             
+"_reflns.d_resolution_low"                "Please provide the low resolution limit to which the data were collected."                 
+"_reflns.number_obs"                      "Please provide the number of reflections satisfying the observation criterion for data collection."
+"_reflns.pdbx_Rmerge_I_obs"               "Please provide at least one of following: R-merge, R-sym, Rpim, Rrim, or CC-half value for data collection."
+#"_reflns.pdbx_Rsym_value"                 "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value for data collection."
+#"_reflns.pdbx_Rpim_I_all"                 "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value for data collection."
+#"_reflns.pdbx_Rrim_I_all"                 "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value for data collection."
+#"_reflns.pdbx_CC_half"                    "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value for data collection."
+#
+"_reflns_shell.d_res_high"                "Please provide the high resolution limit of the highest resolution shell for data collection."
+"_reflns_shell.d_res_low"                 "Please provide the low resolution limit of the highest resolution shell for data collection." 
+"_reflns_shell.number_unique_obs"                
+;Please provide the number of reflections satisfying the observation criterion of the highest resolution shell for
+data collection.
+;
+"_reflns_shell.Rmerge_I_obs"              "Please provide at least one of following: R-merge, R-sym, Rpim, Rrim, or CC-half value of the highest resolution shell for data collection."
+#"_reflns_shell.pdbx_Rsym_value"           "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value of the highest resolution shell for data collection."
+#"_reflns_shell.pdbx_Rpim_I_all"           "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value of the highest resolution shell for data collection."
+#"_reflns_shell.pdbx_Rrim_I_all"           "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value of the highest resolution shell for data collection."
+#"_reflns_shell.pdbx_CC_half"              "Please provide the R-merge, R-sym, Rpim, Rrim, or CC-half value of the highest resolution shell for data collection."
+#
+"_diffrn_detector.detector"               "Please provide the general class of the radiation detector."    
+"_diffrn_detector.type"                   "Please provide the make, model or name of the radiation detector." 
+
+#Missing category
+"refine"                                  "Please provide refinement statistics." 
+"refine_ls_shell"                         #"Please provide the refinement statistics for the highest resolution shell."
+;Provide the refinement statistics for the highest resolution shell, including resolution limits, number of
+observed unique reflections, completeness, and Rfree/Rwork.
+;
+"reflns"                                  "Please provide data collection statistics."
+"reflns_shell"                            #"Please provide the data collection statistics for the highest resolution shell." 
+;Provide the data collection statistics for the highest resolution shell, including resolution limits, number of
+observed unique reflections, completeness, I/SigmaI, redundancy, and at least one of the following statistics:
+Rmerge/Rsym, Rrim/Rmeas, Rpim, or CC1/2.
+;
+"diffrn_detector"                         "Please provide radiation detector information."
+
+#Inconsistent values:
+"_refine.ls_number_reflns_obs > _reflns.number_obs"
+;The number of observed reflections %(value1)s for refinement is more than that for data collection %(value2)s.
+Please provide either the correct values or an explanation.
+;
+
+"_reflns.number_all < _reflns.number_obs"
+;The total number of reflections %(value1)s is less than the number of reflections that satisfy the observation
+criterion for data collection %(value2)s. Please provide the correct values.
+;
+
+"_refine.ls_number_reflns_obs < 80% of _reflns.number_obs"
+;The number of observed reflections used for refinement %(value1)s is less than 80 percent of the number of observed
+reflections for data collection %(value2)s. Please provide either the correct values or an explanation. The data
+collection statistics should be calculated within the same resolution range as the refinement.
+;
+
+"_refine.ls_R_factor_R_free < _refine.ls_R_factor_R_work"
+;The R-free %(value1)s is less than R-work %(value2)s. Please provide either the correct values or an explanation.
+;
+
+"_reflns_shell.Rmerge_I_obs > 0.99"
+;The Rmerge/Rsym value %(value1)s for the highest resolution shell for data collection is larger than 0.99. Please
+verify that this is correct.
+;
+
+"_reflns.pdbx_Rmerge_I_obs > 0.99"
+;The Rmerge/Rsym value %(value1)s for overall data collection is larger than 0.99. Please verify that this is correct.
+;
+
+"abs(_refine_ls_shell.d_res_high - _refine.ls_d_res_high) > 0.1"
+;The high resolution limit of the refinement highest resolution shell %(value1)s is different from the overall high
+resolution for refinement %(value2)s. Please provide the correct values.
+;
+
+"_refine_ls_shell.d_res_low / _refine_ls_shell.d_res_high > 1.12"
+#;Please note that the low resolution limit %(value1)s and the high resolution limit %(value2)s for the highest
+#resolution shell are expected to be closer to the value of the overall high resolution limit.
+;The resolution range in the highest shell (%(value1)s - %(value2)s) is unexpectedly broad. Please verify these numbers.
+;
+
+"_reflns_shell.d_res_low / _reflns_shell.d_res_high > 1.12"
+#;Please note that the low resolution limit %(value1)s and the high resolution limit %(value2)s for the highest
+#resolution data collection shell are expected to be closer to the value of the overall high resolution limit.
+;The resolution range in the highest data collection shell (%(value1)s - %(value2)s) is unexpectedly broad. Please verify
+these numbers.
+;
+
+"abs(_refine_ls_shell.d_res_high - _reflns.d_resolution_high) > 0.1"
+;The high resolution limit of the refinement highest resolution shell %(value1)s is different from the overall high
+resolution for data collection %(value2)s. Please provide the correct values.
+;
+
+"_reflns.d_resolution_high > _refine.ls_d_res_high"
+;The high resolution limit for data collection %(value1)s is not the same as the high resolution limit for refinement
+%(value2)s. Please provide the correct value or an explanation.
+;
+
+"_refine.ls_d_res_low > _reflns.d_resolution_low"
+;The low resolution limit for refinement %(value1)s exceeds the low resolution limit for data collection %(value2)s.
+Please provide the correct values. 
+;
+
+"_refine.ls_percent_reflns_R_free < 1.0"
+;The deposited percentage for the free R set %(value1)s is less than 1.0. Please verify that this is correct.
+;
