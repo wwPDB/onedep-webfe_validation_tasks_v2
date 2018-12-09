@@ -274,12 +274,12 @@ used in the experiment including expression tags and residues missing due to dis
 ? ? ?
 
 n "Chemical shift referencing"
-;Please review section 7.1.2 in the validation pdf report for suggested chemical shift referencing corrections.
+;Please review section 7 in the validation pdf report for suggested chemical shift referencing corrections.
 ;
 ? ? ?
 
 n "Statistically unusual chemical shifts"
-;Please review the statistically unusual chemical shifts listed in section 7.1.4 in validation pdf report.
+;Please review the statistically unusual chemical shifts listed in section 7 in validation pdf report.
 ;
 ? ? ?
 
@@ -471,7 +471,8 @@ n "Citation Title/Authors"
 ? ? ?
 
 n "Best Representative Conformer"
-;The best representative conformer 'INSERT NUMBER' of the ensemble was moved to MODEL 1.
+;Please note that during the annotation of structures, the best representative conformer is automatically moved to the
+first model since secondary structure, binding sites and linkages are generated based on this model.
 ;
 ? ? ?
 
@@ -572,6 +573,7 @@ ligand_geometry                 ?    ?    "Ligand Geometry"
 #link                            y    ?    ?    "LINK Records"
 link                            y    ?    ?
 matthews_coefficient            y    ?    "Matthew Coefficient"
+nmr_entry                       y    ?    "Best Representative Conformer"
 nmr_hydrogen                    y    ?    "Hydrogen Atom"
 oligomeric_author               y    ?    "Assembly"
 oligomeric_pisa                 y    ?    "Assembly"
