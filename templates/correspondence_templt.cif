@@ -70,6 +70,9 @@ Please review the processed files and validation report in PDF format  based on 
 wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
 any corrections, please send a message through the communication system requesting that we open the deposition
 interface for you to upload new coordinates and make any changes.
+
+From July 1st 2019, coordinate files will only be accepted in mmCIF format for structures determined by crystallographic
+methods (X-ray, neutron, fiber, and electron diffraction). PDB format files will no longer be accepted from this date.
 ;
 #
 major
@@ -347,10 +350,9 @@ validation report). Please clarify and provide correct values.
 ? ? ?
 
 n "No Database Sequence Match"
-;Using BLAST, we were unable to find an appropriate sequence database match to your provided sequence(s) in the UniProt
-database. Please note that we only use UniProt as a sequence database reference. You may submit your sequence information
-to UniProt via SPIN (the UniProtKB submission tool) at http://www.ebi.ac.uk/swissprot/Submissions/spin/index.jsp for
-directly sequenced proteins, or to EMBL/GenBank/DDBJ if the nucleotide sequence is available.
+;Using BLAST, we were unable to find an appropriate sequence database match to your provided sequence(s) in the
+UniProt(for proteins)/GenBank(for nucleic acids) databases. Please let us know if there is an appropriate UniProt/GenBank
+entry that can be used as a sequence reference.
 ;
 ? ? ?
 
@@ -712,7 +714,8 @@ resolution for refinement %(value2)s. Please provide the correct values.
 these numbers.
 ;
 
-"abs(_refine_ls_shell.d_res_high - _reflns.d_resolution_high) > 0.1"
+#"abs(_refine_ls_shell.d_res_high - _reflns.d_resolution_high) > 0.1"
+"_refine_ls_shell.d_res_high < _reflns.d_resolution_high"
 ;The high resolution limit of the refinement highest resolution shell %(value1)s is different from the overall high
 resolution for data collection %(value2)s. Please provide the correct values.
 ;
