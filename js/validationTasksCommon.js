@@ -1620,6 +1620,33 @@ $(document).ready(function () {
         });
 
     }
+
+    <!-- buster-report operations -->
+    if ($("#buster-report-dialog").length > 0) {
+	logContext(" Found dialog ");
+        $("#buster-report-button-label").html(getDisplayButtonLabel());
+
+        var serviceData = getServiceContext();
+        $.ajax({
+            url: '/service/validation_tasks_v2/getbusterreport',
+            data: serviceData,
+            dataType: 'json',
+            beforeSend: function() {
+                progressStart();
+            },
+            success: function (jsonObj) {
+                progressEnd();
+                $('#buster-report-table-container').html(jsonObj.htmlcontent);
+                $('#buster-report-table-container').show();
+            },
+            error: function (data, status, e) {
+                progressEnd();
+                alert(e);
+                return false;
+            }
+        });
+    }
+
     <!-- correspondence operations -->
     if ($("#correspondence-dialog").length > 0) {
 	logContext(" Found correspondence dialog ");
