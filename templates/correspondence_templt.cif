@@ -369,11 +369,12 @@ n "LINK Records"
 ;
 ? ? ?
 
-n "Data completeness"
-;There is a large difference between reported (%(reported_completeness)s%%) and calculated (%(calculated_completeness)s%%) values for data completeness.
-Please advise.
-;
-? ? ?
+# removed by DAOTHER-4347
+#n "Data completeness" 
+#;There is a large difference between reported (%(reported_completeness)s%%) and calculated (%(calculated_completeness)s%%) values for data completeness.
+#Please advise.
+#;
+#? ? ?
 
 n "Data Collection Date"
 ;Provide the data collection date for the experiment.
@@ -559,7 +560,7 @@ calculated_completeness         y    ?    ?
 caveat                          y    ?    "Chirality Error"
 cell                            y    ?    ? 
 cispep                          y    ?    "Cis-Peptides"
-completeness_warning            y    ?    "Data completeness"
+#completeness_warning            y    ?    "Data completeness"
 contact_author_warning          y    ?    "Only One Contact Author"
 "data_collection_date"          y    ?    "Data Collection Date"
 determine_method                y    ?    "Structure Determination"
