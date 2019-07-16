@@ -95,7 +95,7 @@ deposition.
 #
 minor
 ;No major issues were raised during data processing. A summary of some of the key annotations in your entry is
-shown below. Please verify that these are correct. If we do not hear from you within two weeks, we will consider
+shown below. Please verify that these are correct. If we do not hear from you within three weeks, we will consider
 this entry to have been approved by you. The entry will then be released according to the release/hold instructions
 you have provided.
 
