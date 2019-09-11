@@ -483,8 +483,8 @@ n "Matthew Coefficient"
 #;The calculated Matthews coefficient and solvent content are not within the accepted ranges. Verify that values are
 #correct.
 #;
-;The reported solvent content/Matthews coefficient (%(solvent_content)s%%/%(matthews_coefficient)s) is below/above 99%% of PDB structures of
-similar resolution and molecular weight. Please confirm that the reported value is valid.
+;The reported solvent content/Matthews coefficient (%(solvent_content)s%%/%(matthews_coefficient)s) is outside the normal range of
+PDB structures of similar resolution and molecular weight. Please confirm that the reported value is valid.
 ;
 ? ? ?
 
