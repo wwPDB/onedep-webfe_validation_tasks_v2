@@ -22,6 +22,11 @@ Entry authors:   %(author_em)s
 ** Please be aware that all public access to your entry will be via the accession code, %(emdbid)s, which is distinct
    from the deposition number.
 
+Please review the processed files and validation report in PDF format  based on the recommendations of the
+wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
+any corrections, please send a message through the communication system requesting that we open the deposition
+interface for you to upload new coordinates and make any changes.
+
 Thank you for your attention.
 
 ;
@@ -37,15 +42,11 @@ Entry title:   PDB:  %(title)s
 Entry authors: PDB:  %(author)s
                EMDB: %(author_em)s
 
-EMDB Annotation comments: 
-
 ** Please review the curated data and either reply with your approval or let us know if any additional changes are
    required.
 
 ** Your map and supporting files will be held until the publication of your primary citation or until 12 months
    after deposition.
-
-PDB Annotation comments:
 
 Please review the processed files and validation report in PDF format  based on the recommendations of the
 wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
