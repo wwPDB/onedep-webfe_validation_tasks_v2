@@ -689,8 +689,8 @@ collection statistics should be calculated within the same resolution range as t
 ;The R-free %(value1)s is less than R-work %(value2)s. Please provide either the correct values or an explanation.
 ;
 
-"_reflns_shell.Rmerge_I_obs > 0.99"
-;The Rmerge/Rsym value %(value1)s for the highest resolution shell for data collection is larger than 0.99. Please
+"_reflns_shell.Rmerge_I_obs > 1.8"
+;The Rmerge/Rsym value %(value1)s for the highest resolution shell for data collection is larger than 1.8. Please
 verify that this is correct.
 ;
 
