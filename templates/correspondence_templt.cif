@@ -139,8 +139,9 @@ residues used in the experiment including expression tags and residues missing d
 ? ? ?
 
 n "Assembly"
-;The assembly predicted by PISA %(oligomeric_pisa)s.
-The assembly provided by author %(oligomeric_author)s.
+#;The assembly predicted by PISA %(oligomeric_pisa)s.
+#The assembly provided by author %(oligomeric_author)s.
+;%(assembly_info)s
 ;
 ;PDB policy requires that the position of each chain in the asymmetric unit be identical to the position of an
 instance of that chain in a biological assembly. This maximizes the resemblance of the asymmetric unit to the
@@ -602,6 +603,7 @@ link                            y    ?    ?
 matthews_coefficient            y    ?    "Matthew Coefficient"
 nmr_entry                       y    ?    "Best Representative Conformer"
 nmr_hydrogen                    y    ?    "Hydrogen Atom"
+assembly_info                   y    ?    "Assembly"
 oligomeric_author               y    ?    "Assembly"
 oligomeric_pisa                 y    ?    "Assembly"
 oligomeric_symmetry             y    y    "Assembly"
