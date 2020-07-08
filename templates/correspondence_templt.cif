@@ -156,6 +156,11 @@ within the asymmetric unit and correct (by refinement) the TLS and anisotropy re
 ;
 assembly "PDB Policy"
 
+n "Oligosaccharides"
+;%(oligosaccharide)s
+;
+? ? ?
+
 n "Missing SASBDB ID"
 ;We noticed that you indicated that this structure was solved using NMR and SAXS. However, you did not provide a
 SASBDB ID. Please deposit your SAS data to SASBDB (https://www.sasbdb.org/) and let us know the SASBDB accession
@@ -607,6 +612,7 @@ assembly_info                   y    ?    "Assembly"
 oligomeric_author               y    ?    "Assembly"
 oligomeric_pisa                 y    ?    "Assembly"
 oligomeric_symmetry             y    y    "Assembly"
+oligosaccharide                 y    ?    "Oligosaccharides"
 pdbid                           y    ?    ?
 peptide_linkage                 y    ?    "Peptide Linkage and Nucleic Acid Linkage"
 polymer_geometry                ?    ?    "Polymer Geometry"
