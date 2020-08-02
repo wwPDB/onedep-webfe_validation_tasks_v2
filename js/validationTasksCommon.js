@@ -607,6 +607,23 @@ function updateDownloadOptions(jsonObj) {
             $("#download-extra-check-report-files-label").show();
         }
     }
+    if ("emdxmlreportfiles" in jsonObj) {
+        arr = jsonObj.emdxmlreportfiles;
+        htmlS = "";
+        for (var i = 0; i < arr.length; i++) {
+            fn = arr[i];
+            url = "/sessions/" + sessionId + "/" + fn;
+            el = '<span> &nbsp; <a href="' + url + '">' + fn + '</a> </span>'
+            logContext("log file " + i + " " + el);
+            htmlS += el;
+        }
+        if (arr.length > 0) {
+            $("#download-extra-check-report-files").html(htmlS);
+            $("#download-extra-check-report-files-label").html("EMD XML reports:");
+            $("#download-extra-check-report-files").show();
+            $("#download-extra-check-report-files-label").show();
+        }
+    }
     // ok
     if ("correspondencefile" in jsonObj) {
         arr = jsonObj.correspondencefile;

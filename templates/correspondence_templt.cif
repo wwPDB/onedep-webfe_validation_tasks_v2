@@ -421,9 +421,9 @@ n "Zero Occupancies"
 ;Note that your coordinate file contains atoms with zero occupancy.
 
 %(zero_occupancy)s
-
-Let us know if you would like us to remove these atoms and list them as unobserved.
 ;
+#
+#Let us know if you would like us to remove these atoms and list them as unobserved.
 ? ? ?
 
 n "Missing Backbone Atoms"
