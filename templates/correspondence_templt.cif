@@ -143,7 +143,7 @@ n "Assembly"
 #The assembly provided by author %(oligomeric_author)s.
 ;%(assembly_info)s
 
-Please login to your deposition session and visit the Assembly Review page to view the annotated assemblies in 3D.
+Please login to your deposition session and visit the Assembly Review page to verify the annotated assemblies in 3D.
 ;
 ;PDB policy requires that the position of each chain in the asymmetric unit be identical to the position of an
 instance of that chain in a biological assembly. This maximizes the resemblance of the asymmetric unit to the
