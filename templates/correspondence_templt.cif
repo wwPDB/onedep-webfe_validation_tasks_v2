@@ -71,9 +71,6 @@ Please review the processed files and validation report in PDF format  based on 
 wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
 any corrections, please send a message through the communication system requesting that we open the deposition
 interface for you to upload new coordinates and make any changes.
-
-From July 1st 2019, coordinate files will only be accepted in mmCIF format for structures determined by crystallographic
-methods (X-ray, neutron, fiber, and electron diffraction). PDB format files will no longer be accepted from this date.
 ;
 #
 major
