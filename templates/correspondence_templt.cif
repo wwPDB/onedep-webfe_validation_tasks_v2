@@ -22,10 +22,12 @@ Entry authors:   %(author_em)s
 ** Please be aware that all public access to your entry will be via the accession code, %(emdbid)s, which is distinct
    from the deposition number.
 
-Please review the processed files and validation report in PDF format  based on the recommendations of the
-wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
-any corrections, please send a message through the communication system requesting that we open the deposition
-interface for you to upload new coordinates and make any changes.
+Please log into your deposition session and review the processed files and validation report in PDF format
+generated based on the recommendations of the wwPDB Validation Task Force. The processed files are located
+below this message on Communication page of your deposition session. We encourage you to submit the validation
+report to journals during manuscript review. If you have any corrections, please send a message through the
+communication page requesting that we open the deposition interface for you to upload new coordinates and/or
+make any changes.
 
 Thank you for your attention.
 
@@ -48,10 +50,12 @@ Entry authors: PDB:  %(author)s
 ** Your map and supporting files will be held until the publication of your primary citation or until 12 months
    after deposition.
 
-Please review the processed files and validation report in PDF format  based on the recommendations of the
-wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
-any corrections, please send a message through the communication system requesting that we open the deposition
-interface for you to upload new coordinates and make any changes.
+Please log into your deposition session and review the processed files and validation report in PDF format
+generated based on the recommendations of the wwPDB Validation Task Force. The processed files are located
+below this message on Communication page of your deposition session. We encourage you to submit the validation
+report to journals during manuscript review. If you have any corrections, please send a message through the
+communication page requesting that we open the deposition interface for you to upload new coordinates and/or
+make any changes.
 ;
 #
 header 
@@ -67,10 +71,12 @@ wwPDB encourage depositors to provide ORCID identifiers and information on relev
 depositing PDB data. ORCID identifiers are unique to each researcher; usage will help avoid ambiguity in attributing
 the correct authorship of PDB, BMRB, and EMDB entries. In order to register an ORCID, please visit http://orcid.org.
 
-Please review the processed files and validation report in PDF format  based on the recommendations of the
-wwPDB Validation Task Force. We encourage you to submit it to journals during manuscript review. If you have
-any corrections, please send a message through the communication system requesting that we open the deposition
-interface for you to upload new coordinates and make any changes.
+Please log into your deposition session and review the processed files and validation report in PDF format
+generated based on the recommendations of the wwPDB Validation Task Force. The processed files are located
+below this message on Communication page of your deposition session. We encourage you to submit the validation
+report to journals during manuscript review. If you have any corrections, please send a message through the
+communication page requesting that we open the deposition interface for you to upload new coordinates and/or
+make any changes.
 ;
 #
 major
