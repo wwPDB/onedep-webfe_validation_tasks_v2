@@ -136,8 +136,11 @@ _rcsb_question_category.additional_text
 _rcsb_question_category.text_index
 _rcsb_question_category.add_remove_button
 n "Sequence"
-;Please verify that the sample sequence in the entity_poly section of the coordinate CIF file includes all
-residues used in the experiment including expression tags and residues missing due to disorder.
+#;Please verify that the sample sequence in the entity_poly section of the coordinate CIF file includes all
+#residues used in the experiment including expression tags and residues missing due to disorder.
+;Please verify that the sample sequence in the entity_poly section of the coordinate CIF file encompasses all
+residues used in the experiment including expression tags, engineered mutations, unobserved regions due to
+disorder, etc. and excluding portions that were cleaved-off prior to or during the experiment.
 ;
 ? ? ?
 
@@ -745,7 +748,7 @@ resolution for refinement %(value2)s. Please provide the correct values.
 "_refine_ls_shell.d_res_low / _refine_ls_shell.d_res_high > 1.12"
 #;Please note that the low resolution limit %(value1)s and the high resolution limit %(value2)s for the highest
 #resolution shell are expected to be closer to the value of the overall high resolution limit.
-;The resolution range in the highest shell (%(value1)s - %(value2)s) is unexpectedly broad. Please verify these numbers.
+;The resolution range in the highest refinement shell (%(value1)s - %(value2)s) is unexpectedly broad. Please verify these numbers.
 ;
 
 "_reflns_shell.d_res_low / _reflns_shell.d_res_high > 1.12"
