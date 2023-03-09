@@ -92,9 +92,10 @@ major_minor_addition
 ;
 #
 major_release
-;If we do not hear from you and a paper is published within a year citing this entry, the entry will be released
-with a CAVEAT record. Otherwise this entry will be automatically withdrawn at the one year anniversary of the
-deposition.
+;
+If we do not hear from you, this entry may either be released or withdrawn on the one year anniversary of its deposition.
+However, if a paper citing this entry is published within a year of its deposition,this entry will be released as per 
+our release policies.
 ;
 #
 minor
@@ -127,6 +128,29 @@ system and provide the PubMed ID (if available), journal name, volume, page numb
 Thank you for your attention.
 
 ;
+#
+encourage_xray
+;We encourage you to submit your raw X-ray diffraction data at one of the raw image archives and inform us of the DOI:
+
+     proteindiffraction.org
+     SBGrid
+     Zenodo
+     CXIDB
+     XRDa
+;
+#
+encourage_em
+;
+We encourage you to submit your raw elctron microscopy and electron crystallograpy data at one of the
+raw image archives and inform us of the DOI:
+
+     SBGrid
+     Zenodo
+     CXIDB
+     EMPIAR
+;
+#
+
 #
 loop_
 _rcsb_question_category.major_flag
