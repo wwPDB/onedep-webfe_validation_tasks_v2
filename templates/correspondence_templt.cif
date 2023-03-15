@@ -29,6 +29,14 @@ report to journals during manuscript review. If you have any corrections, please
 communication page requesting that we open the deposition interface for you to upload new coordinates and/or
 make any changes.
 
+We also encourage you to submit your raw elctron microscopy and electron crystallograpy data at one of the
+raw image archives and inform us of the DOI:
+
+     SBGrid
+     Zenodo
+     CXIDB
+     EMPIAR
+
 Thank you for your attention.
 
 ;
