@@ -1831,6 +1831,8 @@ $(document).ready(function () {
                          $('#control_button' + i).attr('value', 'Show Select Option');
                     }
                     var header = $('#letter_header').html().trim();
+                    var letter_encourage = $('#letter_encourage').html().trim();
+                    if (letter_encourage != '') header = header + '\n\n' + letter_encourage;
                     var mm_text = $('#minor').html().trim();
                     var rel_text = $('#minor_release').html().trim();
                     var text = '';

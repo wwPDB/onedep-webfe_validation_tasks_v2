@@ -30,12 +30,16 @@ communication page requesting that we open the deposition interface for you to u
 make any changes.
 
 We also encourage you to submit your raw elctron microscopy and electron crystallograpy data at one of the
-raw image archives and inform us of the DOI:
+raw image archives:
 
      SBGrid
      Zenodo
      CXIDB
      EMPIAR
+
+After the raw image is deposited into one of the above resources, please provide the image deposition DOI to
+the PDB via OneDep communication or at the OneDep "Related entries" page by requesting unlock of deposition
+session. See FAQ at https://www.wwpdb.org/deposition/faq#start.
 
 Thank you for your attention.
 
@@ -138,24 +142,33 @@ Thank you for your attention.
 ;
 #
 encourage_xray
-;We encourage you to submit your raw X-ray diffraction data at one of the raw image archives and inform us of the DOI:
+;We encourage you to submit your raw X-ray diffraction data at one of the raw image archives:
 
      proteindiffraction.org
      SBGrid
      Zenodo
      CXIDB
      XRDa
+
+After the raw image is deposited into one of the above resources, please provide the image deposition DOI to
+the PDB via OneDep communication or at the OneDep "Related entries" page by requesting unlock of deposition
+session. See FAQ at https://www.wwpdb.org/deposition/faq#start.
+
 ;
 #
 encourage_em
 ;
 We encourage you to submit your raw elctron microscopy and electron crystallograpy data at one of the
-raw image archives and inform us of the DOI:
+raw image archives:
 
      SBGrid
      Zenodo
      CXIDB
      EMPIAR
+
+After the raw image is deposited into one of the above resources, please provide the image deposition DOI to
+the PDB via OneDep communication or at the OneDep "Related entries" page by requesting unlock of deposition
+session. See FAQ at https://www.wwpdb.org/deposition/faq#start.
 ;
 #
 
@@ -183,18 +196,19 @@ n "Assembly"
 
 Please login to your deposition session and visit the Assembly Review page to verify the annotated assemblies in 3D.
 ;
-;PDB policy requires that the position of each chain in the asymmetric unit be identical to the position of an
-instance of that chain in a biological assembly. This maximizes the resemblance of the asymmetric unit to the
-biological assembly and minimizes the number of coordinate transformations required to generate the biological
-assembly or assemblies from the contents of the asymmetric unit.
-
-(1) Therefore, we have moved chain 'INSERT HERE' to symmetry-equivalent position 'INSERT HERE' within the
-asymmetric unit.
-
-(2) Therefore, we request that you please move chain 'INSERT HERE' to symmetry-equivalent position 'INSERT HERE'
-within the asymmetric unit and correct (by refinement) the TLS and anisotropy records accordingly.
-;
-assembly "PDB Policy"
+? ? ?
+#;PDB policy requires that the position of each chain in the asymmetric unit be identical to the position of an
+#instance of that chain in a biological assembly. This maximizes the resemblance of the asymmetric unit to the
+#biological assembly and minimizes the number of coordinate transformations required to generate the biological
+#assembly or assemblies from the contents of the asymmetric unit.
+#
+#(1) Therefore, we have moved chain 'INSERT HERE' to symmetry-equivalent position 'INSERT HERE' within the
+#asymmetric unit.
+#
+#(2) Therefore, we request that you please move chain 'INSERT HERE' to symmetry-equivalent position 'INSERT HERE'
+#within the asymmetric unit and correct (by refinement) the TLS and anisotropy records accordingly.
+#;
+#assembly "PDB Policy"
 
 n "Oligosaccharide"
 ;%(oligosaccharide)s
