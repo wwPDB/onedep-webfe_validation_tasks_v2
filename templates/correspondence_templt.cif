@@ -337,6 +337,17 @@ validation report and upload a corrected coordinate and/or structure factor file
 ;
 ? ? ?
 
+n "FSC Curve"
+;The author-provided resolution differs by more than 10%% from the resolution calculated by the FSC curve. Please
+ensure the provided resolution is correct.
+;
+? ? ?
+
+n "Atom inclusion"
+;At the recommended contour level %(atom_inclusion_all_atoms)s%% of all atoms and %(atom_inclusion_backbone)s%% of backbone atoms are inside the map.
+;
+? ? ?
+
 y "Chemical shift/Model sequence mapping"
 ;The sample sequence in the entity_poly section of the coordinate CIF file is incomplete when compared to the
 sequence in the chemical shift file.  Please provide the complete sample sequence which includes all residues
@@ -674,6 +685,9 @@ replace_pdb_id                  y    ?    "Supersede/Obsolete"
 reported_completeness           y    ?    ?
 r_free_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
 r_work_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
+fsc_curve                       ?    ?    "FSC Curve"
+atom_inclusion_all_atoms        ?    ?    "Atom inclusion"
+atom_inclusion_backbone         ?    ?    "Atom inclusion"
 cs_sequence_mismatch            ?    ?    "Chemical shift/Model sequence mapping"
 cs_referencing                  ?    ?    "Chemical shift referencing"
 cs_statistics                   ?    ?    "Statistically unusual chemical shifts"
