@@ -535,6 +535,21 @@ any available details regarding the plasmid used.
 ;
 ? ? ?
 
+# DAOTHER-8515
+n "Crystallization Temperature"
+;There is an unusual crystallization temperature listed in this entry. The crystallization temperature is listed at
+%(exptl_crystal_grow_temp_K)s Kelvin (%(exptl_crystal_grow_temp_C)s Celsius). Please verify that this is correct.
+;
+? ? ?
+
+# DAOTHER-8595
+n "Temperature for Diffraction Collection"
+;There is an unusual diffraction temperature listed in this entry. The diffraction temperature is listed at %(diffrn_ambient_temp_K)s
+Kelvin (%(diffrn_ambient_temp_C)s Celsius). The most common cryo-temperature for X-ray methods is 100 Kelvin
+(-173.15 Celsius).  Please verify that this is correct.
+;
+? ? ?
+
 n "MAD Wavelengths" "Provide all the wavelengths for the MAD experiment." ? ? ?
 
 n "Starting Model" "Please provide starting model (PDB ID code, if available) used for molecular replacement." ? ? ?
@@ -659,9 +674,13 @@ cispep                          y    ?    "Cis-Peptides"
 contact_author_warning          y    ?    "Only One Contact Author"
 "data_collection_date"          y    ?    "Data Collection Date"
 determine_method                y    ?    "Structure Determination"
+diffrn_ambient_temp_C           y    ?    "Temperature for Diffraction Collection"
+diffrn_ambient_temp_K           y    ?    "Temperature for Diffraction Collection"
 distant_water                   y    ?    "Distant Waters"
 emdbid                          y    ?    ?
 entryid                         y    ?    ?
+exptl_crystal_grow_temp_C       y    ?    "Crystallization Temperature"
+exptl_crystal_grow_temp_K       y    ?    "Crystallization Temperature"
 gap_warning                     y    ?    "Large Gap Distance"
 header                          y    ?    "Header"
 high_b_factor                   y    ?    "High B-factor Values"
