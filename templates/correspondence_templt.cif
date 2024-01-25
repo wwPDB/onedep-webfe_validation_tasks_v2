@@ -378,6 +378,12 @@ y "Hydrogen Atom"
 ;
 ? ? ?
 
+n "Missing water molecules"
+;There are no water molecules modelled in your structure, which is unusual for a crystal structure at this resolution.
+Please examine your model and the experimental data and advise. If you find there should be water molecules in the
+structure, please re-upload an improved model.
+;
+? ? ?
 n "Distant Waters"
 #;Water molecules that are more than 5 Angstrom away from the nearest polymer chain are listed in
 #distant_solvent_atoms section of the coordinate CIF file. Please review these outliers. 
@@ -661,7 +667,10 @@ _token_question_mapping.from_corres_info
 _token_question_mapping.additional_text
 _token_question_mapping.question
 accession_code                  y    ?    ?
+assembly_info                   y    ?    "Assembly"
 atom_clash                      y    ?    "Atomic Clashes"
+atom_inclusion_all_atoms        ?    ?    "Atom inclusion"
+atom_inclusion_backbone         ?    ?    "Atom inclusion"
 author                          y    ?    ?
 author_em                       y    ?    ?
 author_release_sequence_code    y    ?    ?
@@ -672,6 +681,9 @@ cell                            y    ?    ?
 cispep                          y    ?    "Cis-Peptides"
 #completeness_warning            y    ?    "Data completeness"
 contact_author_warning          y    ?    "Only One Contact Author"
+cs_sequence_mismatch            ?    ?    "Chemical shift/Model sequence mapping"
+cs_referencing                  ?    ?    "Chemical shift referencing"
+cs_statistics                   ?    ?    "Statistically unusual chemical shifts"
 "data_collection_date"          y    ?    "Data Collection Date"
 determine_method                y    ?    "Structure Determination"
 diffrn_ambient_temp_C           y    ?    "Temperature for Diffraction Collection"
@@ -681,6 +693,7 @@ emdbid                          y    ?    ?
 entryid                         y    ?    ?
 exptl_crystal_grow_temp_C       y    ?    "Crystallization Temperature"
 exptl_crystal_grow_temp_K       y    ?    "Crystallization Temperature"
+fsc_curve                       ?    ?    "FSC Curve"
 gap_warning                     y    ?    "Large Gap Distance"
 header                          y    ?    "Header"
 high_b_factor                   y    ?    "High B-factor Values"
@@ -690,9 +703,11 @@ ligand_geometry                 ?    ?    "Ligand Geometry"
 #link                            y    ?    ?    "LINK Records"
 link                            y    ?    ?
 matthews_coefficient            y    ?    "Matthew Coefficient"
+missing_backbone_atom           y    ?    "Missing Backbone Atoms"
+missing_sasbdb_id               y    ?    "Missing SASBDB ID"
+missing_water                   y    ?    "Missing water molecules"
 nmr_entry                       y    ?    "Best Representative Conformer"
 nmr_hydrogen                    y    ?    "Hydrogen Atom"
-assembly_info                   y    ?    "Assembly"
 oligomeric_author               y    ?    "Assembly"
 oligomeric_pisa                 y    ?    "Assembly"
 oligomeric_symmetry             y    y    "Assembly"
@@ -704,12 +719,6 @@ replace_pdb_id                  y    ?    "Supersede/Obsolete"
 reported_completeness           y    ?    ?
 r_free_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
 r_work_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
-fsc_curve                       ?    ?    "FSC Curve"
-atom_inclusion_all_atoms        ?    ?    "Atom inclusion"
-atom_inclusion_backbone         ?    ?    "Atom inclusion"
-cs_sequence_mismatch            ?    ?    "Chemical shift/Model sequence mapping"
-cs_referencing                  ?    ?    "Chemical shift referencing"
-cs_statistics                   ?    ?    "Statistically unusual chemical shifts"
 seqadv                          y    ?    "Sequence Database Discrepancy"
 software                        y    ?    "Software"
 solvent_content                 y    ?    "Matthew Coefficient"
@@ -718,6 +727,7 @@ starting_model                  y    ?    "Starting Model"
 status                          y    ?    ?
 status_em                       y    ?    ?
 title                           y    ?    ?
+title_author_suppression        y    ?    "Title and Author Suppression"
 title_em                        y    ?    ?
 title_warning                   y    ?    "Short Title"
 tls_record                      y    ?    "Missing TLS Records"
@@ -727,9 +737,6 @@ values                          ?    ?    "Missing and/or Inconsistent Values"
 zero_b_factor                   y    ?    "Zero B-factor Values"
 zero_occupancy                  y    ?    "Zero Occupancies"
 zero_occupancy_ligand           y    ?    "Zero or Low Occupancy Ligand"
-missing_backbone_atom           y    ?    "Missing Backbone Atoms"
-missing_sasbdb_id               y    ?    "Missing SASBDB ID"
-title_author_suppression        y    ?    "Title and Author Suppression"
 #z_score_ligand                  ?    ?    "Fit of model to data RSR Z-score"
 #z_score_polymer                 ?    ?    "Fit of model to data RSR Z-score"
 z_score                         ?    ?    "Fit of model to data RSR Z-score"
