@@ -286,6 +286,10 @@ corrected coordinates in which these residues are not linked.
 
 y "Large Gap Distance" "%(gap_warning)s"  ? ? ?
 
+n "Re-refinement"
+;This entry is a re-refinement of the original data from %(re_refinement)s. Please verify.
+;
+? ? ?
 
 n "Ligand Identity"
 ;The following chemical group exists in your deposition. Please review section 2 of the validation report
@@ -719,6 +723,7 @@ replace_pdb_id                  y    ?    "Supersede/Obsolete"
 reported_completeness           y    ?    ?
 r_free_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
 r_work_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
+re_refinement                   y    ?    "Re-refinement"
 seqadv                          y    ?    "Sequence Database Discrepancy"
 software                        y    ?    "Software"
 solvent_content                 y    ?    "Matthew Coefficient"
