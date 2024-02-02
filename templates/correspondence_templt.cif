@@ -382,7 +382,7 @@ y "Hydrogen Atom"
 ;
 ? ? ?
 
-n "Missing water molecules"
+y "Missing water molecules"
 ;There are no water molecules modelled in your structure, which is unusual for a crystal structure at this resolution.
 Please examine your model and the experimental data and advise. If you find there should be water molecules in the
 structure, please re-upload an improved model.
