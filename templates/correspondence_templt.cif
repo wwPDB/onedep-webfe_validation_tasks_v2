@@ -183,9 +183,11 @@ _rcsb_question_category.add_remove_button
 n "Sequence"
 #;Please verify that the sample sequence in the entity_poly section of the coordinate CIF file includes all
 #residues used in the experiment including expression tags and residues missing due to disorder.
-;Please verify that the sample sequence in the entity_poly section of the coordinate CIF file encompasses all
-residues used in the experiment including expression tags, engineered mutations, unobserved regions due to
+;1.1. Please verify that the sample sequence in the entity_poly section of the coordinate CIF file encompasses
+all residues used in the experiment including expression tags, engineered mutations, unobserved regions due to
 disorder, etc. and excluding portions that were cleaved-off prior to or during the experiment.
+
+%(seqadv)s
 ;
 ? ? ?
 
@@ -235,13 +237,13 @@ the same principal investigator or group leader for this request.
 ;
 ? ? ?
 
-n "Sequence Database Discrepancy"
-;The reported sample sequence differs from reference sequence (%(accession_code)s). Please confirm all sequence
-advisories listed below (as well as in section 1 of the validation report) are annotated correctly.
-
-%(seqadv)s
-;
-? ? ?
+#n "Sequence Database Discrepancy"
+#;The reported sample sequence differs from reference sequence (%(accession_code)s). Please confirm all sequence
+#advisories listed below (as well as in section 1 of the validation report) are annotated correctly.
+#
+#%(seqadv)s
+#;
+#? ? ?
 
 y "Structure Factor - high R-factors, low correlation"
 ;Section 4 (Data refinement and statistics) of the validation report shows high R-factors and/or low correlation
@@ -670,7 +672,7 @@ _token_question_mapping.token
 _token_question_mapping.from_corres_info
 _token_question_mapping.additional_text
 _token_question_mapping.question
-accession_code                  y    ?    ?
+#accession_code                  y    ?    ?
 assembly_info                   y    ?    "Assembly"
 atom_clash                      y    ?    "Atomic Clashes"
 atom_inclusion_all_atoms        ?    ?    "Atom inclusion"
@@ -724,7 +726,7 @@ reported_completeness           y    ?    ?
 r_free_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
 r_work_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
 re_refinement                   y    ?    "Re-refinement"
-seqadv                          y    ?    "Sequence Database Discrepancy"
+seqadv                          y    ?    ?      #"Sequence Database Discrepancy"
 software                        y    ?    "Software"
 solvent_content                 y    ?    "Matthew Coefficient"
 special_atoms                   y    ?    "Atoms on Special Positions"
