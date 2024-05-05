@@ -183,7 +183,7 @@ _rcsb_question_category.add_remove_button
 n "Sequence"
 #;Please verify that the sample sequence in the entity_poly section of the coordinate CIF file includes all
 #residues used in the experiment including expression tags and residues missing due to disorder.
-;1.1. Please verify that the sample sequence in the entity_poly section of the coordinate CIF file encompasses
+;$$$.1. Please verify that the sample sequence in the entity_poly section of the coordinate CIF file encompasses
 all residues used in the experiment including expression tags, engineered mutations, unobserved regions due to
 disorder, etc. and excluding portions that were cleaved-off prior to or during the experiment.
 
@@ -506,7 +506,7 @@ n "Zero Occupancies"
 n "Missing Backbone Atoms"
 ;The following residues have missing atoms:
 
-     RES MOD# C SEQ          ATOMS
+     RES MOD# CHAIN   SEQ    ATOMS
 
 %(missing_backbone_atom)s
 ;

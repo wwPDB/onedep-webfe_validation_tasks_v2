@@ -1806,11 +1806,11 @@ $(document).ready(function () {
                             var title = $('#question_' + i).attr('value');
                             if ($('#majorflag_' + i).is(':checked')) {
                                 count += 1;
-                                major_text += '\n' + count + '. ';
+                                major_text += '\n' + count.toString() + '. ';
                                 if (title.indexOf('Free text question') == -1) {
                                     major_text += title + '\n\n';
                                 }
-                                major_text += $('#text_' + i).val().trim() + '\n\n';
+                                major_text += $('#text_' + i).val().trim().replaceAll('$$$', count.toString()) + '\n\n';
                             }
                         }
                     }
@@ -1820,11 +1820,11 @@ $(document).ready(function () {
                             var title = $('#question_' + i).attr('value');
                             if ($('#majorflag_' + i).is(':checked')) continue;
                             count += 1;
-                            minor_text += '\n' + count + '. '
+                            minor_text += '\n' + count.toString() + '. '
                             if (title.indexOf('Free text question') == -1) {
                                 minor_text += title + '\n\n'
                             }
-                            minor_text += $('#text_' + i).val().trim() + '\n\n';
+                            minor_text += $('#text_' + i).val().trim().replaceAll('$$$', count.toString()) + '\n\n';
                         }
                     }
                     for (var i = 1; i < 5; i++) {
