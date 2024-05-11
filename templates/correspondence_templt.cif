@@ -29,7 +29,7 @@ report to journals during manuscript review. If you have any corrections, please
 communication page requesting that we open the deposition interface for you to upload new coordinates and/or
 make any changes.
 
-We also encourage you to submit your raw elctron microscopy and electron crystallograpy data at one of the
+We also encourage you to submit your raw electron microscopy and electron crystallograpy data at one of the
 raw image archives:
 
      SBGrid
@@ -158,7 +158,7 @@ session. See FAQ at https://www.wwpdb.org/deposition/faq#start.
 #
 encourage_em
 ;
-We encourage you to submit your raw elctron microscopy and electron crystallograpy data at one of the
+We encourage you to submit your raw electron microscopy and electron crystallograpy data at one of the
 raw image archives:
 
      SBGrid
