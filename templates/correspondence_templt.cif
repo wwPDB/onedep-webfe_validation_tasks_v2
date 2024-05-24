@@ -131,7 +131,7 @@ release_hpub
    12 months after deposition.
 ;
 release_rel     "** Your coordinates and supporting files will be released immediately upon approval."
-release_repl_rel   "** Your coordinates file ill be released immediately upon approval."
+release_repl_rel   "** Your coordinates file will be released immediately upon approval."
 release_unknown "** No release information has been provided for your entry."
 #
 signature
