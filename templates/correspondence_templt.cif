@@ -130,7 +130,8 @@ release_hpub
 ;** Your coordinates and supporting files will be held until the publication of your primary citation or until
    12 months after deposition.
 ;
-release_rel     "** Your coordinates and supporting files will be released immediately."
+release_rel     "** Your coordinates and supporting files will be released immediately upon approval."
+release_repl_rel   "** Your coordinates file ill be released immediately upon approval."
 release_unknown "** No release information has been provided for your entry."
 #
 signature
