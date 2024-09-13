@@ -6,8 +6,7 @@ _letter_template.text
 letter_em_only
 ;Dear Depositors,
 
-Your EMDB entry ID %(emdbid)s which corresponds to Deposition ID %(entryid)s has been annotated and the status
-is now %(status_em)s. 
+Your EMDB entry ID %(emdbid)s which corresponds to Deposition ID %(entryid)s has been annotated. 
 
 Entry title:   %(title_em)s
 
