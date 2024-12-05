@@ -282,7 +282,7 @@ y "Peptide Linkage and Nucleic Acid Linkage"
 ;%(peptide_linkage)s
 
 Provide a corrected sample sequence or request unlocking of your deposition interface so that you can upload
-corrected coordinates in which these residues are not linked.
+corrected coordinates in which these residues are properly linked.
 ;
 ? ? ?
 
