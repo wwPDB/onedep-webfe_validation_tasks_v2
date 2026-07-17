@@ -324,7 +324,9 @@ Please upload new coordinates to resolve this issue.
 ? ? ?
 
 n "Metal Coordination"
-;Please check your metal coordination which has unexpected coordination geometry [%(unexpected_metal_geometry)s].
+;Please check your metal coordination which has unexpected coordination geometry:
+
+%(unexpected_metal_geometry)s
 ;
 ? ? ?
 
