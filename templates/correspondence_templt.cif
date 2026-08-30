@@ -324,7 +324,12 @@ Please upload new coordinates to resolve this issue.
 ? ? ?
 
 n "Metal Coordination"
-;Please check your metal coordination which has unexpected coordination geometry:
+;Please check your metal coordination which has unexpected coordination geometry based on the expected geometry
+annotated in the CCD:
+
+%(ccd_download_list)s
+
+Please verify if this coordination geometry is chemically valid with detailed explanation.
 
 %(unexpected_metal_geometry)s
 ;
@@ -691,6 +696,7 @@ author_release_status_code      y    ?    ?
 calculated_completeness         y    ?    ?
 caveat                          y    ?    "Chirality Error"
 cell                            y    ?    ? 
+ccd_download_list               y    ?    ? 
 cispep                          y    ?    "Cis-Peptides"
 #completeness_warning            y    ?    "Data completeness"
 contact_author_warning          y    ?    "Only One Contact Author"
