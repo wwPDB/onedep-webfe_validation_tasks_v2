@@ -27,7 +27,7 @@ below this message on Communication page of your deposition session. We encourag
 report to journals during manuscript review. If you have any corrections, please send a message through the
 communication page requesting that we open the deposition interface for you to upload new coordinates and/or
 make any changes.
-
+%(warning)s
 We also encourage you to submit your raw electron microscopy and electron crystallography data at one of the
 raw image archives:
 
@@ -361,6 +361,12 @@ ensure the provided resolution is correct.
 ;
 ? ? ?
 
+n "Nominal defocus"
+;The current values entered for min and max defocus are identical [ %(nominal_defocus)s ] but this entry is not tomography or EC.
+Please verify.
+;
+? ? ?
+
 n "Atom inclusion"
 ;At the recommended contour level %(atom_inclusion_all_atoms)s%% of all atoms and %(atom_inclusion_backbone)s%% of backbone atoms are inside the map.
 ;
@@ -683,84 +689,86 @@ loop_
 _token_question_mapping.token
 _token_question_mapping.from_corres_info
 _token_question_mapping.additional_text
+_token_question_mapping.include_in_em_map_only
 _token_question_mapping.question
-#accession_code                  y    ?    ?
-assembly_info                   y    ?    "Assembly"
-atom_clash                      y    ?    "Atomic Clashes"
-atom_inclusion_all_atoms        ?    ?    "Atom inclusion"
-atom_inclusion_backbone         ?    ?    "Atom inclusion"
-author                          y    ?    ?
-author_em                       y    ?    ?
-author_release_sequence_code    y    ?    ?
-author_release_status_code      y    ?    ?
-calculated_completeness         y    ?    ?
-caveat                          y    ?    "Chirality Error"
-cell                            y    ?    ? 
-ccd_download_list               y    ?    ? 
-cispep                          y    ?    "Cis-Peptides"
-#completeness_warning            y    ?    "Data completeness"
-contact_author_warning          y    ?    "Only One Contact Author"
-cs_sequence_mismatch            ?    ?    "Chemical shift/Model sequence mapping"
-cs_referencing                  ?    ?    "Chemical shift referencing"
-cs_statistics                   ?    ?    "Statistically unusual chemical shifts"
-"data_collection_date"          y    ?    "Data Collection Date"
-determine_method                y    ?    "Structure Determination"
-diffrn_ambient_temp_C           y    ?    "Temperature for Diffraction Collection"
-diffrn_ambient_temp_K           y    ?    "Temperature for Diffraction Collection"
-distant_water                   y    ?    "Distant Waters"
-emdbid                          y    ?    ?
-entryid                         y    ?    ?
-exptl_crystal_grow_temp_C       y    ?    "Crystallization Temperature"
-exptl_crystal_grow_temp_K       y    ?    "Crystallization Temperature"
-fsc_curve                       ?    ?    "FSC Curve"
-gap_warning                     y    ?    "Large Gap Distance"
-header                          y    ?    "Header"
-high_b_factor                   y    ?    "High B-factor Values"
-hold_date                       y    ?    ?
-large_occupancy                 y    ?    "Occupancy greater than one"
-ligand_geometry                 ?    ?    "Ligand Geometry"
-#link                            y    ?    ?    "LINK Records"
-link                            y    ?    ?
-matthews_coefficient            y    ?    "Matthew Coefficient"
-missing_backbone_atom           y    ?    "Missing Backbone Atoms"
-missing_sasbdb_id               y    ?    "Missing SASBDB ID"
-missing_water                   y    ?    "Missing water molecules"
-nmr_entry                       y    ?    "Best Representative Conformer"
-nmr_hydrogen                    y    ?    "Hydrogen Atom"
-oligomeric_author               y    ?    "Assembly"
-oligomeric_pisa                 y    ?    "Assembly"
-oligomeric_symmetry             y    y    "Assembly"
-oligosaccharide                 y    ?    "Oligosaccharide"
-pdbid                           y    ?    ?
-peptide_linkage                 y    ?    "Peptide Linkage and Nucleic Acid Linkage"
-polymer_geometry                ?    ?    "Polymer Geometry"
-replace_pdb_id                  y    ?    "Supersede/Obsolete"
-reported_completeness           y    ?    ?
-r_free_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
-r_work_diff                     ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
-re_refinement                   y    ?    "Re-refinement"
-seqadv                          y    ?    ?      #"Sequence Database Discrepancy"
-software                        y    ?    "Software"
-solvent_content                 y    ?    "Matthew Coefficient"
-special_atoms                   y    ?    "Atoms on Special Positions"
-starting_model                  y    ?    "Starting Model"
-status                          y    ?    ?
-status_em                       y    ?    ?
-title                           y    ?    ?
-title_author_suppression        y    ?    "Title and Author Suppression"
-title_em                        y    ?    ?
-title_warning                   y    ?    "Short Title"
-tls_record                      y    ?    "Missing TLS Records"
-torsion                         y    ?    "Phi/Psi Torsion Angles"
-unexpected_metal_geometry       y    ?    "Metal Coordination"
-updated_polymer_residue_name    y    ?    "Polymer Residue Identity Update"
-values                          ?    ?    "Missing and/or Inconsistent Values"
-zero_b_factor                   y    ?    "Zero B-factor Values"
-zero_occupancy                  y    ?    "Zero Occupancies"
-zero_occupancy_ligand           y    ?    "Zero or Low Occupancy Ligand"
-#z_score_ligand                  ?    ?    "Fit of model to data RSR Z-score"
-#z_score_polymer                 ?    ?    "Fit of model to data RSR Z-score"
-z_score                         ?    ?    "Fit of model to data RSR Z-score"
+#accession_code                  y    ?    ?    ?
+assembly_info                   y    ?    ?    "Assembly"
+atom_clash                      y    ?    ?    "Atomic Clashes"
+atom_inclusion_all_atoms        ?    ?    ?    "Atom inclusion"
+atom_inclusion_backbone         ?    ?    ?    "Atom inclusion"
+author                          y    ?    ?    ?
+author_em                       y    ?    ?    ?
+author_release_sequence_code    y    ?    ?    ?
+author_release_status_code      y    ?    ?    ?
+calculated_completeness         y    ?    ?    ?
+caveat                          y    ?    ?    "Chirality Error"
+cell                            y    ?    ?    ? 
+ccd_download_list               y    ?    ?    ? 
+cispep                          y    ?    ?    "Cis-Peptides"
+#completeness_warning            y    ?    ?    "Data completeness"
+contact_author_warning          y    ?    ?    "Only One Contact Author"
+cs_sequence_mismatch            ?    ?    ?    "Chemical shift/Model sequence mapping"
+cs_referencing                  ?    ?    ?    "Chemical shift referencing"
+cs_statistics                   ?    ?    ?    "Statistically unusual chemical shifts"
+"data_collection_date"          y    ?    ?    "Data Collection Date"
+determine_method                y    ?    ?    "Structure Determination"
+diffrn_ambient_temp_C           y    ?    ?    "Temperature for Diffraction Collection"
+diffrn_ambient_temp_K           y    ?    ?    "Temperature for Diffraction Collection"
+distant_water                   y    ?    ?    "Distant Waters"
+emdbid                          y    ?    ?    ?
+entryid                         y    ?    ?    ?
+exptl_crystal_grow_temp_C       y    ?    ?    "Crystallization Temperature"
+exptl_crystal_grow_temp_K       y    ?    ?    "Crystallization Temperature"
+fsc_curve                       ?    ?    ?    "FSC Curve"
+nominal_defocus                 y    ?    y    "Nominal defocus"
+gap_warning                     y    ?    ?    "Large Gap Distance"
+header                          y    ?    ?    "Header"
+high_b_factor                   y    ?    ?    "High B-factor Values"
+hold_date                       y    ?    ?    ?
+large_occupancy                 y    ?    ?    "Occupancy greater than one"
+ligand_geometry                 ?    ?    ?    "Ligand Geometry"
+#link                            y    ?    ?    ?    "LINK Records"
+link                            y    ?    ?    ?
+matthews_coefficient            y    ?    ?    "Matthew Coefficient"
+missing_backbone_atom           y    ?    ?    "Missing Backbone Atoms"
+missing_sasbdb_id               y    ?    ?    "Missing SASBDB ID"
+missing_water                   y    ?    ?    "Missing water molecules"
+nmr_entry                       y    ?    ?    "Best Representative Conformer"
+nmr_hydrogen                    y    ?    ?    "Hydrogen Atom"
+oligomeric_author               y    ?    ?    "Assembly"
+oligomeric_pisa                 y    ?    ?    "Assembly"
+oligomeric_symmetry             y    y    ?    "Assembly"
+oligosaccharide                 y    ?    ?    "Oligosaccharide"
+pdbid                           y    ?    ?    ?
+peptide_linkage                 y    ?    ?    "Peptide Linkage and Nucleic Acid Linkage"
+polymer_geometry                ?    ?    ?    "Polymer Geometry"
+replace_pdb_id                  y    ?    ?    "Supersede/Obsolete"
+reported_completeness           y    ?    ?    ?
+r_free_diff                     y    ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
+r_work_diff                     y    ?    ?    "Discrepancy Between Reported and Calculated R and/or free R"
+re_refinement                   y    ?    ?    "Re-refinement"
+seqadv                          y    ?    ?    ?      #"Sequence Database Discrepancy"
+software                        y    ?    ?    "Software"
+solvent_content                 y    ?    ?    "Matthew Coefficient"
+special_atoms                   y    ?    ?    "Atoms on Special Positions"
+starting_model                  y    ?    ?    "Starting Model"
+status                          y    ?    ?    ?
+status_em                       y    ?    ?    ?
+title                           y    ?    ?    ?
+title_author_suppression        y    ?    ?    "Title and Author Suppression"
+title_em                        y    ?    ?    ?
+title_warning                   y    ?    ?    "Short Title"
+tls_record                      y    ?    ?    "Missing TLS Records"
+torsion                         y    ?    ?    "Phi/Psi Torsion Angles"
+unexpected_metal_geometry       y    ?    ?    "Metal Coordination"
+updated_polymer_residue_name    y    ?    ?    "Polymer Residue Identity Update"
+values                          ?    ?    ?    "Missing and/or Inconsistent Values"
+zero_b_factor                   y    ?    ?    "Zero B-factor Values"
+zero_occupancy                  y    ?    ?    "Zero Occupancies"
+zero_occupancy_ligand           y    ?    ?    "Zero or Low Occupancy Ligand"
+#z_score_ligand                  ?    ?    ?    "Fit of model to data RSR Z-score"
+#z_score_polymer                 ?    ?    ?    "Fit of model to data RSR Z-score"
+z_score                         ?    ?    ?    "Fit of model to data RSR Z-score"
 #
 loop_ 
 _value_mapping.token
