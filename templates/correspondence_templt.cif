@@ -680,6 +680,141 @@ n "Title and Author Suppression"
 ;
 ? ? ?
 
+n "Repeat Author Name"
+;The following author names are repeated:
+
+%(repeat_audit_author)s
+
+Please double-check the author list.
+;
+? ? ?
+
+n "Repeat Citation Author"
+;The following citation author names are repeated:
+
+%(repeat_citation_author)s
+
+Please double-check the citation author list.
+;
+? ? ?
+
+n "Identical B-factor Values"
+;All atoms in this entry have the same B-factor (%(identical_b_factor)s). Please upload corrected coordinates or advise.
+;
+? ? ?
+
+n "Low B-factor Values"
+;All atoms have B-factor values below 10. Please upload corrected coordinates or advise.
+;
+? ? ?
+
+n "Few Particles"
+;The reconstruction used %(em_few_particles)s particles, which is fewer than 100. Please verify this number.
+;
+? ? ?
+
+n "Ligand Far From Polymer"
+;The following ligands are far from any polymer:
+
+%(far_ligand)s
+
+Please verify the placement.
+;
+? ? ?
+
+n "Links to Review"
+;Please review the following links. The leaving-atom flag is not both:
+
+%(links_to_review)s
+;
+? ? ?
+
+n "Missing Atoms"
+;The following residues have missing atoms:
+
+%(missing_atom)s
+;
+? ? ?
+
+n "Defocus Units"
+;Defocus should be given in nm. The following values look like they might be in the wrong unit:
+
+%(defocus_unit)s
+
+Please verify these values.
+;
+? ? ?
+
+n "Dissociated Residue"
+;Please review the following residues:
+
+%(dissociated_residue)s
+
+Please upload corrected coordinates or advise.
+;
+? ? ?
+
+n "Unconnected Atom"
+;Please review the following atoms:
+
+%(unconnected_atom)s
+
+Please upload corrected coordinates or advise.
+;
+? ? ?
+
+n "Bond Distance"
+;Please review the following bond distances:
+
+%(bond_distance)s
+
+Please upload corrected coordinates or advise.
+;
+? ? ?
+
+n "NDG Residue"
+;This entry contains NDG:
+
+%(ndg_residue)s
+
+Please verify this is correct.
+;
+? ? ?
+
+n "Poly-ALA Sequence"
+;%(poly_ala)s
+
+Please verify the sequence.
+;
+? ? ?
+
+n "MET and MSE"
+;Both MET and MSE are present in:
+
+%(met_mse)s
+
+Please verify the sequence.
+;
+? ? ?
+
+n "MSE in a Natural Source"
+;The following entities are purified from a natural source and contain MSE:
+
+%(mse_nat)s
+
+Please verify the source and the sequence.
+;
+? ? ?
+
+n "Long Synthetic Protein"
+;The following synthetic protein entities are longer than 100 residues:
+
+%(synthetic_seq)s
+
+Please verify the source method and the sequence.
+;
+? ? ?
+
 #n "Change of Status for PSI"
 #;We have changed the status of the entry to REL, since your submission is a PSI
 #project. According to PSI policy, these entries should be released immediately.
@@ -766,6 +901,23 @@ values                          ?    ?    ?    "Missing and/or Inconsistent Valu
 zero_b_factor                   y    ?    ?    "Zero B-factor Values"
 zero_occupancy                  y    ?    ?    "Zero Occupancies"
 zero_occupancy_ligand           y    ?    ?    "Zero or Low Occupancy Ligand"
+bond_distance                   y    ?    ?    "Bond Distance"
+defocus_unit                    y    ?    y    "Defocus Units"
+dissociated_residue             y    ?    ?    "Dissociated Residue"
+em_few_particles                y    ?    y    "Few Particles"
+far_ligand                      y    ?    ?    "Ligand Far From Polymer"
+identical_b_factor              y    ?    ?    "Identical B-factor Values"
+links_to_review                 y    ?    ?    "Links to Review"
+low_b_factor                    y    ?    ?    "Low B-factor Values"
+met_mse                         y    ?    ?    "MET and MSE"
+missing_atom                    y    ?    ?    "Missing Atoms"
+mse_nat                         y    ?    ?    "MSE in a Natural Source"
+ndg_residue                     y    ?    ?    "NDG Residue"
+poly_ala                        y    ?    ?    "Poly-ALA Sequence"
+repeat_audit_author             y    ?    ?    "Repeat Author Name"
+repeat_citation_author          y    ?    ?    "Repeat Citation Author"
+synthetic_seq                   y    ?    ?    "Long Synthetic Protein"
+unconnected_atom                y    ?    ?    "Unconnected Atom"
 #z_score_ligand                  ?    ?    ?    "Fit of model to data RSR Z-score"
 #z_score_polymer                 ?    ?    ?    "Fit of model to data RSR Z-score"
 z_score                         ?    ?    ?    "Fit of model to data RSR Z-score"
@@ -891,4 +1043,104 @@ Please provide the correct values.
 
 "_refine.ls_percent_reflns_R_free < 1.0"
 ;The deposited percentage for the free R set %(value1)s is less than %(dict_value)s. Please verify that this is correct.
+;
+
+"_refine.ls_R_factor_R_work > _refine.ls_R_factor_obs"
+;R-work %(value1)s is greater than R-obs %(value2)s. Please provide the correct values or an explanation.
+;
+
+"_refine.ls_R_factor_R_work > _refine.ls_R_factor_all"
+;R-work %(value1)s is greater than R-all %(value2)s. Please provide the correct values or an explanation.
+;
+
+"_refine.ls_number_reflns_R_free < 1"
+;The number of reflections in the free R set is %(value1)s. Please provide the correct value or an explanation.
+;
+
+"_reflns.pdbx_CC_half < 0.75"
+;CC1/2 for the data set is %(value1)s, which is below 0.75. Please verify that this is correct.
+;
+
+"_reflns_shell.d_res_high > _reflns_shell.d_res_low"
+;In the data-collection shell, the high resolution limit %(value1)s is greater than the low resolution limit %(value2)s. Please provide the correct values.
+;
+
+"_refine_ls_shell.d_res_high > _refine_ls_shell.d_res_low"
+;In the refinement shell, the high resolution limit %(value1)s is greater than the low resolution limit %(value2)s. Please provide the correct values.
+;
+
+"_refine.ls_number_reflns_all / _refine.ls_number_reflns_obs > 3"
+;The number of all unique reflections for refinement %(value1)s is more than three times the number of observed unique reflections %(value2)s. Please provide the number of crystallographically unique measured reflections.
+;
+
+"_reflns.number_all / _reflns.number_obs > 3"
+;The number of all unique reflections for data collection %(value1)s is more than three times the number of observed unique reflections %(value2)s. Please provide the number of crystallographically unique measured reflections.
+;
+
+"_reflns.number_obs / _refine.ls_number_reflns_obs > 1.5"
+;The number of unique measured reflections for data collection %(value1)s is large compared with the number used in refinement %(value2)s. Please provide the number of unique measured reflections for data collection.
+;
+
+"_refine.ls_R_factor_all > 1.0"
+;R-all %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_refine.ls_R_factor_obs > 1.0"
+;R-obs %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_refine.ls_R_factor_R_work > 1.0"
+;R-work %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_refine.ls_R_factor_R_free > 1.0"
+;R-free %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_refine_ls_shell.R_factor_all > 1.0"
+;In a refinement shell, R-all %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_refine_ls_shell.R_factor_obs > 1.0"
+;In a refinement shell, R-obs %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_refine_ls_shell.R_factor_R_work > 1.0"
+;In a refinement shell, R-work %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_refine_ls_shell.R_factor_R_free > 1.0"
+;In a refinement shell, R-free %(value1)s is greater than 1.0. Please provide the correct value.
+;
+
+"_reflns.percent_possible_obs > 100"
+;The percentage of observed reflections %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_reflns.percent_possible_all > 100"
+;The percentage of all reflections %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_reflns_shell.percent_possible_obs > 100"
+;In a data-collection shell, the percentage of observed reflections %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_reflns_shell.percent_possible_all > 100"
+;In a data-collection shell, the percentage of all reflections %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_refine.ls_percent_reflns_obs > 100"
+;The percentage of observed reflections used in refinement %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_refine.ls_percent_reflns_R_free > 100"
+;The percentage of reflections in the free R set %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_refine_ls_shell.percent_reflns_obs > 100"
+;In a refinement shell, the percentage of observed reflections %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_refine_ls_shell.percent_reflns_R_free > 100"
+;In a refinement shell, the percentage of reflections in the free R set %(value1)s is greater than 100. Please provide the correct value.
 ;
