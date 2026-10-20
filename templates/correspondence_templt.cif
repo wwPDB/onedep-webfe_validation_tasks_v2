@@ -819,7 +819,48 @@ Please verify the source method and the sequence.
 #;We have changed the status of the entry to REL, since your submission is a PSI
 #project. According to PSI policy, these entries should be released immediately.
 #;
-#
+
+n "Calculated data completeness"
+;The calculated data completeness is %(calculated_completeness_low)s, which is below 65. Please verify that this is correct.
+;
+? ? ?
+
+n "Data completeness difference"
+;The reported and calculated data completeness values differ by more than 20 (%(completeness_difference)s). Please verify these values.
+;
+? ? ?
+
+n "Model wavelength"
+;The wavelength %(model_wavelength_abnormal)s in the model is greater than 2.0 or less than 0.5 Angstroms. Please verify this value.
+;
+? ? ?
+
+n "Coordinate wavelength"
+;The wavelength %(coord_wavelength_abnormal)s in the model is greater than 3.0 Angstroms, or between 0.01 and 0.6 Angstroms. Please verify this value.
+;
+? ? ?
+
+n "Structure factor wavelength"
+;The structure factor wavelength is outside the expected range. Please verify this value.
+
+%(sf_wavelength_abnormal)s
+;
+? ? ?
+
+n "Wavelength mismatch"
+;The model and structure factor wavelengths do not match. Please verify these values.
+
+%(sf_wavelength_mismatch)s
+;
+? ? ?
+
+n "Wavelength mismatch to check"
+;The model and structure factor wavelengths do not match and should be checked. Please verify these values.
+
+%(sf_wavelength_mismatch_check)s
+;
+? ? ?
+
 loop_
 _token_question_mapping.token
 _token_question_mapping.from_corres_info
@@ -856,6 +897,13 @@ exptl_crystal_grow_temp_C       y    ?    ?    "Crystallization Temperature"
 exptl_crystal_grow_temp_K       y    ?    ?    "Crystallization Temperature"
 fsc_curve                       ?    ?    ?    "FSC Curve"
 nominal_defocus                 y    ?    y    "Nominal defocus"
+calculated_completeness_low     y    ?    ?    "Calculated data completeness"
+completeness_difference         y    ?    ?    "Data completeness difference"
+model_wavelength_abnormal       y    ?    ?    "Model wavelength"
+coord_wavelength_abnormal       y    ?    ?    "Coordinate wavelength"
+sf_wavelength_abnormal          y    ?    ?    "Structure factor wavelength"
+sf_wavelength_mismatch          y    ?    ?    "Wavelength mismatch"
+sf_wavelength_mismatch_check    y    ?    ?    "Wavelength mismatch to check"
 gap_warning                     y    ?    ?    "Large Gap Distance"
 header                          y    ?    ?    "Header"
 high_b_factor                   y    ?    ?    "High B-factor Values"
@@ -1143,4 +1191,8 @@ Please provide the correct values.
 
 "_refine_ls_shell.percent_reflns_R_free > 100"
 ;In a refinement shell, the percentage of reflections in the free R set %(value1)s is greater than 100. Please provide the correct value.
+;
+
+"_refine.ls_percent_reflns_obs < 65"
+;The reported data completeness %(value1)s is below %(dict_value)s. Please verify that this is correct.
 ;
